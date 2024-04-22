@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-disabled vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Help:Creating a bot - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-client-prefs-pinned-disabled vector-feature-night-mode-disabled skin-night-mode-disabled vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],
+"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"18fc331f-c68c-493c-b300-72571a9b18ce","wgCanonicalNamespace":"Help","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":12,"wgPageName":"Help:Creating_a_bot","wgTitle":"Creating a bot","wgCurRevisionId":1187817225,"wgRevisionId":1187817225,"wgArticleId":8354786,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia move-protected project pages","Wikipedia information pages","Wikipedia bots"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Help:Creating_a_bot","wgRelevantArticleId":8354786,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":["sysop"],"wgNoticeProject":"wikipedia",
+"wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":30000,"wgULSCurrentAutonym":"English","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgDiscussionToolsFeaturesEnabled":{"replytool":true,"newtopictool":true,"sourcemodetoolbar":true,"topicsubscription":false,"autotopicsub":false,"visualenhancements":false,"visualenhancements_reply":false,"visualenhancements_pageframe":false},"wgDiscussionToolsFallbackEditMode":"source","wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q9384748","wgCheckUserClientHintsHeadersJsApi":[
+"architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"skins.vector.user.styles":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","ext.cite.styles":"ready","ext.discussionTools.init.styles":"ready","oojs-ui-core.styles":"ready","oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","jquery.tablesorter.styles":"ready","jquery.makeCollapsible.styles":"ready","ext.wikimediamessages.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready",
+"ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mediawiki.page.media","site","mediawiki.page.ready","jquery.tablesorter","jquery.makeCollapsible","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.discussionTools.init","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","wikibase.client.vector-2022","ext.checkUser.clientHints"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.discussionTools.init.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cjquery.makeCollapsible.styles%7Cjquery.tablesorter.styles%7Cmediawiki.widgets.styles%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui.styles.indicators%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.43.0-wmf.1">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="Help:Creating a bot - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Help:Creating_a_bot">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Help:Creating_a_bot">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="ext-discussiontools-replytool-enabled ext-discussiontools-newtopictool-enabled ext-discussiontools-sourcemodetoolbar-enabled skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-12 ns-subject mw-editable page-Help_Creating_a_bot rootpage-Help_Creating_a_bot skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" id="" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools" role="navigation" >
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+		
+		
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=Help%3ACreating+a+bot" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=Help%3ACreating+a+bot" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Help%3ACreating+a+bot" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Help%3ACreating+a+bot" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site" role="navigation">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" role="navigation" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Why_would_I_need_to_create_a_bot?"
+		class="vector-toc-list-item vector-toc-level-1">
+		<a class="vector-toc-link" href="#Why_would_I_need_to_create_a_bot?">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">1</span>Why would I need to create a bot?</div>
+		</a>
+		
+		<ul id="toc-Why_would_I_need_to_create_a_bot?-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Considerations_before_creating_a_bot"
+		class="vector-toc-list-item vector-toc-level-1">
+		<a class="vector-toc-link" href="#Considerations_before_creating_a_bot">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">2</span>Considerations before creating a bot</div>
+		</a>
+		
+			<button aria-controls="toc-Considerations_before_creating_a_bot-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Considerations before creating a bot subsection</span>
+			</button>
+		
+		<ul id="toc-Considerations_before_creating_a_bot-sublist" class="vector-toc-list">
+			<li id="toc-Reuse_existing_bots"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Reuse_existing_bots">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.1</span>Reuse existing bots</div>
+			</a>
+			
+			<ul id="toc-Reuse_existing_bots-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Reuse_codebase"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Reuse_codebase">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.2</span>Reuse codebase</div>
+			</a>
+			
+			<ul id="toc-Reuse_codebase-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Important_questions"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Important_questions">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">2.3</span>Important questions</div>
+			</a>
+			
+			<ul id="toc-Important_questions-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-How_does_a_Wikipedia_bot_work?"
+		class="vector-toc-list-item vector-toc-level-1">
+		<a class="vector-toc-link" href="#How_does_a_Wikipedia_bot_work?">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">3</span>How does a Wikipedia bot work?</div>
+		</a>
+		
+			<button aria-controls="toc-How_does_a_Wikipedia_bot_work?-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle How does a Wikipedia bot work? subsection</span>
+			</button>
+		
+		<ul id="toc-How_does_a_Wikipedia_bot_work?-sublist" class="vector-toc-list">
+			<li id="toc-Overview_of_operation"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Overview_of_operation">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.1</span>Overview of operation</div>
+			</a>
+			
+			<ul id="toc-Overview_of_operation-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-APIs_for_bots"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#APIs_for_bots">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.2</span>APIs for bots</div>
+			</a>
+			
+			<ul id="toc-APIs_for_bots-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Logging_in"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Logging_in">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.3</span>Logging in</div>
+			</a>
+			
+			<ul id="toc-Logging_in-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Editing;_edit_tokens"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Editing;_edit_tokens">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.4</span>Editing; edit tokens</div>
+			</a>
+			
+			<ul id="toc-Editing;_edit_tokens-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Edit_conflicts"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Edit_conflicts">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">3.5</span>Edit conflicts</div>
+			</a>
+			
+			<ul id="toc-Edit_conflicts-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Overview_of_the_process_of_developing_a_bot"
+		class="vector-toc-list-item vector-toc-level-1">
+		<a class="vector-toc-link" href="#Overview_of_the_process_of_developing_a_bot">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">4</span>Overview of the process of developing a bot</div>
+		</a>
+		
+			<button aria-controls="toc-Overview_of_the_process_of_developing_a_bot-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Overview of the process of developing a bot subsection</span>
+			</button>
+		
+		<ul id="toc-Overview_of_the_process_of_developing_a_bot-sublist" class="vector-toc-list">
+			<li id="toc-Idea"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Idea">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.1</span>Idea</div>
+			</a>
+			
+			<ul id="toc-Idea-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Specification"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Specification">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.2</span>Specification</div>
+			</a>
+			
+			<ul id="toc-Specification-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Software_architecture"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Software_architecture">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.3</span>Software architecture</div>
+			</a>
+			
+			<ul id="toc-Software_architecture-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Implementation"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Implementation">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.4</span>Implementation</div>
+			</a>
+			
+			<ul id="toc-Implementation-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Testing"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Testing">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.5</span>Testing</div>
+			</a>
+			
+			<ul id="toc-Testing-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Documentation"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Documentation">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.6</span>Documentation</div>
+			</a>
+			
+			<ul id="toc-Documentation-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Queries/Complaints"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Queries/Complaints">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.7</span>Queries/Complaints</div>
+			</a>
+			
+			<ul id="toc-Queries/Complaints-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Maintenance"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Maintenance">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">4.8</span>Maintenance</div>
+			</a>
+			
+			<ul id="toc-Maintenance-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-General_guidelines_for_running_a_bot"
+		class="vector-toc-list-item vector-toc-level-1">
+		<a class="vector-toc-link" href="#General_guidelines_for_running_a_bot">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">5</span>General guidelines for running a bot</div>
+		</a>
+		
+			<button aria-controls="toc-General_guidelines_for_running_a_bot-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle General guidelines for running a bot subsection</span>
+			</button>
+		
+		<ul id="toc-General_guidelines_for_running_a_bot-sublist" class="vector-toc-list">
+			<li id="toc-Bot_best_practices"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Bot_best_practices">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.1</span>Bot best practices</div>
+			</a>
+			
+			<ul id="toc-Bot_best_practices-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Common_bot_features_you_should_consider_implementing"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Common_bot_features_you_should_consider_implementing">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2</span>Common bot features you should consider implementing</div>
+			</a>
+			
+			<ul id="toc-Common_bot_features_you_should_consider_implementing-sublist" class="vector-toc-list">
+				<li id="toc-Manual_assistance"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Manual_assistance">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2.1</span>Manual assistance</div>
+			</a>
+			
+			<ul id="toc-Manual_assistance-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Disabling_the_bot"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Disabling_the_bot">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2.2</span>Disabling the bot</div>
+			</a>
+			
+			<ul id="toc-Disabling_the_bot-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Signature"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Signature">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2.3</span>Signature</div>
+			</a>
+			
+			<ul id="toc-Signature-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Bot_Flag"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Bot_Flag">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2.4</span>Bot Flag</div>
+			</a>
+			
+			<ul id="toc-Bot_Flag-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Monitoring_the_bot_status"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Monitoring_the_bot_status">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">5.2.5</span>Monitoring the bot status</div>
+			</a>
+			
+			<ul id="toc-Monitoring_the_bot_status-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Open-source_bots"
+		class="vector-toc-list-item vector-toc-level-1">
+		<a class="vector-toc-link" href="#Open-source_bots">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">6</span>Open-source bots</div>
+		</a>
+		
+		<ul id="toc-Open-source_bots-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Programming_languages_and_libraries"
+		class="vector-toc-list-item vector-toc-level-1">
+		<a class="vector-toc-link" href="#Programming_languages_and_libraries">
+			<div class="vector-toc-text">
+			<span class="vector-toc-numb">7</span>Programming languages and libraries</div>
+		</a>
+		
+			<button aria-controls="toc-Programming_languages_and_libraries-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon vector-icon--x-small mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Programming languages and libraries subsection</span>
+			</button>
+		
+		<ul id="toc-Programming_languages_and_libraries-sublist" class="vector-toc-list">
+			<li id="toc-Awk"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Awk">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.1</span>Awk</div>
+			</a>
+			
+			<ul id="toc-Awk-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Perl"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Perl">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.2</span>Perl</div>
+			</a>
+			
+			<ul id="toc-Perl-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-PHP"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#PHP">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.3</span>PHP</div>
+			</a>
+			
+			<ul id="toc-PHP-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Python"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Python">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.4</span>Python</div>
+			</a>
+			
+			<ul id="toc-Python-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-MATLAB"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#MATLAB">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.5</span>MATLAB</div>
+			</a>
+			
+			<ul id="toc-MATLAB-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Microsoft_.NET"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Microsoft_.NET">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.6</span>Microsoft .NET</div>
+			</a>
+			
+			<ul id="toc-Microsoft_.NET-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Java"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Java">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.7</span>Java</div>
+			</a>
+			
+			<ul id="toc-Java-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Node.js"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Node.js">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.8</span>Node.js</div>
+			</a>
+			
+			<ul id="toc-Node.js-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Ruby"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Ruby">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.9</span>Ruby</div>
+			</a>
+			
+			<ul id="toc-Ruby-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Common_Lisp"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Common_Lisp">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.10</span>Common Lisp</div>
+			</a>
+			
+			<ul id="toc-Common_Lisp-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Haskell"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Haskell">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.11</span>Haskell</div>
+			</a>
+			
+			<ul id="toc-Haskell-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-VBScript"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#VBScript">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.12</span>VBScript</div>
+			</a>
+			
+			<ul id="toc-VBScript-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Lua"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Lua">
+				<div class="vector-toc-text">
+				<span class="vector-toc-numb">7.13</span>Lua</div>
+			</a>
+			
+			<ul id="toc-Lua-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav role="navigation" aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-namespace">Help</span><span class="mw-page-title-separator">:</span><span class="mw-page-title-main">Creating a bot</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 25 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-25" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">25 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-ar mw-list-item"><a href="https://ar.wikipedia.org/wiki/%D9%88%D9%8A%D9%83%D9%8A%D8%A8%D9%8A%D8%AF%D9%8A%D8%A7:%D9%83%D9%8A%D9%81_%D8%AA%D8%B5%D9%86%D8%B9_%D8%A8%D9%88%D8%AA" title="ويكيبيديا:كيف تصنع بوت – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target"><span>العربية</span></a></li><li class="interlanguage-link interwiki-az mw-list-item"><a href="https://az.wikipedia.org/wiki/Vikipediya:Botun_yarad%C4%B1lmas%C4%B1" title="Vikipediya:Botun yaradılması – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target"><span>Azərbaycanca</span></a></li><li class="interlanguage-link interwiki-cv mw-list-item"><a href="https://cv.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8:%C3%87%D0%B0%D0%BC%D1%80%C4%83%D0%BA_%D0%B1%D0%BE%D1%82%C3%A7%C4%83_%D0%B2%D0%B0%D0%BB%D0%BB%D0%B8_%D1%81%C4%95%D0%BD%D3%B3%D1%81%D0%B5%D0%BC" title="Википеди:Çамрăк ботçă валли сĕнӳсем – Chuvash" lang="cv" hreflang="cv" class="interlanguage-link-target"><span>Чӑвашла</span></a></li><li class="interlanguage-link interwiki-es mw-list-item"><a href="https://es.wikipedia.org/wiki/Ayuda:C%C3%B3mo_crear_un_bot" title="Ayuda:Cómo crear un bot – Spanish" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-fa mw-list-item"><a href="https://fa.wikipedia.org/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D9%BE%D8%AF%DB%8C%D8%A7:%DA%86%DA%AF%D9%88%D9%86%D9%87_%DB%8C%DA%A9_%D8%B1%D8%A8%D8%A7%D8%AA_%D8%A8%D8%B3%D8%A7%D8%B2%DB%8C%D9%85" title="ویکی‌پدیا:چگونه یک ربات بسازیم – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target"><span>فارسی</span></a></li><li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Cr%C3%A9er_un_bot" title="Wikipédia:Créer un bot – French" lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-gl mw-list-item"><a href="https://gl.wikipedia.org/wiki/Axuda:Usar_bots" title="Axuda:Usar bots – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target"><span>Galego</span></a></li><li class="interlanguage-link interwiki-ko mw-list-item"><a href="https://ko.wikipedia.org/wiki/%EB%8F%84%EC%9B%80%EB%A7%90:%EB%B4%87_%EB%A7%8C%EB%93%A4%EA%B8%B0" title="도움말:봇 만들기 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target"><span>한국어</span></a></li><li class="interlanguage-link interwiki-hi mw-list-item"><a href="https://hi.wikipedia.org/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%BF%E0%A4%AA%E0%A5%80%E0%A4%A1%E0%A4%BF%E0%A4%AF%E0%A4%BE:%E0%A4%AC%E0%A5%89%E0%A4%9F_%E0%A4%AC%E0%A4%A8%E0%A4%BE%E0%A4%A8%E0%A5%87_%E0%A4%95%E0%A5%80_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%BE" title="विकिपीडिया:बॉट बनाने की प्रक्रिया – Hindi" lang="hi" hreflang="hi" class="interlanguage-link-target"><span>हिन्दी</span></a></li><li class="interlanguage-link interwiki-hr mw-list-item"><a href="https://hr.wikipedia.org/wiki/Wikipedija:Botovi/Bot" title="Wikipedija:Botovi/Bot – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target"><span>Hrvatski</span></a></li><li class="interlanguage-link interwiki-id mw-list-item"><a href="https://id.wikipedia.org/wiki/Bantuan:Bot" title="Bantuan:Bot – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target"><span>Bahasa Indonesia</span></a></li><li class="interlanguage-link interwiki-ka mw-list-item"><a href="https://ka.wikipedia.org/wiki/%E1%83%95%E1%83%98%E1%83%99%E1%83%98%E1%83%9E%E1%83%94%E1%83%93%E1%83%98%E1%83%90:%E1%83%91%E1%83%9D%E1%83%A2%E1%83%98%E1%83%A1_%E1%83%A8%E1%83%94%E1%83%A5%E1%83%9B%E1%83%9C%E1%83%90" title="ვიკიპედია:ბოტის შექმნა – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target"><span>ქართული</span></a></li><li class="interlanguage-link interwiki-mk mw-list-item"><a href="https://mk.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%98%D0%B0:%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%9A%D0%B5_%D0%BD%D0%B0_%D0%B1%D0%BE%D1%82" title="Википедија:Создавање на бот – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target"><span>Македонски</span></a></li><li class="interlanguage-link interwiki-ps mw-list-item"><a href="https://ps.wikipedia.org/wiki/%D9%88%D9%8A%DA%A9%D9%8A%D9%BE%DB%90%DA%89%D9%8A%D8%A7:%D9%88%D9%8A%DA%A9%D9%8A_%D8%B1%D9%88%D8%A8%D8%A7%D9%BC_%DA%85%D9%86%DA%AB%D9%87_%D8%AC%D9%88%DA%93_%DA%A9%DA%93%D9%88" title="ويکيپېډيا:ويکي روباټ څنګه جوړ کړو – Pashto" lang="ps" hreflang="ps" class="interlanguage-link-target"><span>پښتو</span></a></li><li class="interlanguage-link interwiki-pt mw-list-item"><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Como_criar_um_rob%C3%B4" title="Wikipédia:Como criar um robô – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target"><span>Português</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8_%D1%8E%D0%BD%D0%BE%D0%BC%D1%83_%D0%B1%D0%BE%D1%82%D0%BE%D0%B2%D0%BE%D0%B4%D1%83" title="Википедия:Рекомендации юному ботоводу – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-sr mw-list-item"><a href="https://sr.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%98%D0%B0:%D0%9F%D1%80%D0%B0%D0%B2%D1%99%D0%B5%D1%9A%D0%B5_%D0%B1%D0%BE%D1%82%D0%B0" title="Википедија:Прављење бота – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target"><span>Српски / srpski</span></a></li><li class="interlanguage-link interwiki-sv badge-Q70894304 mw-list-item" title=""><a href="https://sv.wikipedia.org/wiki/Wikipedia:Skaffa_bot" title="Wikipedia:Skaffa bot – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target"><span>Svenska</span></a></li><li class="interlanguage-link interwiki-tt mw-list-item"><a href="https://tt.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%91%D0%BE%D1%82_%D1%83%D1%80%D0%BD%D0%B0%D1%88%D1%82%D1%8B%D1%80%D1%83_%D2%BB%D3%99%D0%BC_%D0%BA%D1%83%D0%BB%D0%BB%D0%B0%D0%BD%D1%83" title="Википедия:Бот урнаштыру һәм куллану – Tatar" lang="tt" hreflang="tt" class="interlanguage-link-target"><span>Татарча / tatarça</span></a></li><li class="interlanguage-link interwiki-te mw-list-item"><a href="https://te.wikipedia.org/wiki/%E0%B0%B5%E0%B0%BF%E0%B0%95%E0%B1%80%E0%B0%AA%E0%B1%80%E0%B0%A1%E0%B0%BF%E0%B0%AF%E0%B0%BE:%E0%B0%AC%E0%B0%BE%E0%B0%9F%E0%B1%81_%E0%B0%B8%E0%B1%83%E0%B0%B7%E0%B1%8D%E0%B0%9F%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%A1%E0%B0%82_%E0%B0%8E%E0%B0%B2%E0%B0%BE%3F" title="వికీపీడియా:బాటు సృష్టించడం ఎలా? – Telugu" lang="te" hreflang="te" class="interlanguage-link-target"><span>తెలుగు</span></a></li><li class="interlanguage-link interwiki-tr mw-list-item"><a href="https://tr.wikipedia.org/wiki/Yard%C4%B1m:Bot_olu%C5%9Fturma" title="Yardım:Bot oluşturma – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target"><span>Türkçe</span></a></li><li class="interlanguage-link interwiki-ur mw-list-item"><a href="https://ur.wikipedia.org/wiki/%D9%85%D9%86%D8%B5%D9%88%D8%A8%DB%81:PHP_bot_framework_table" title="منصوبہ:PHP bot framework table – Urdu" lang="ur" hreflang="ur" class="interlanguage-link-target"><span>اردو</span></a></li><li class="interlanguage-link interwiki-vi mw-list-item"><a href="https://vi.wikipedia.org/wiki/Wikipedia:T%E1%BA%A1o_bot" title="Wikipedia:Tạo bot – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target"><span>Tiếng Việt</span></a></li><li class="interlanguage-link interwiki-zh-yue mw-list-item"><a href="https://zh-yue.wikipedia.org/wiki/Help:%E6%A9%9F%E6%A2%B0%E4%BA%BA" title="Help:機械人 – Cantonese" lang="yue" hreflang="yue" class="interlanguage-link-target"><span>粵語</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/Wikipedia:%E8%A3%BD%E4%BD%9C%E6%A9%9F%E5%99%A8%E4%BA%BA" title="Wikipedia:製作機器人 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target"><span>中文</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q9384748#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-help" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Help:Creating_a_bot" title="View the help page [c]" accesskey="c"><span>Help page</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Help_talk:Creating_a_bot" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="p-variants" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="p-variants-label" for="p-variants-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Help:Creating_a_bot"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Help:Creating_a_bot"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Help:Creating_a_bot" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Help:Creating_a_bot" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Help:Creating_a_bot&amp;oldid=1187817225" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHelp%3ACreating_a_bot"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHelp%3ACreating_a_bot"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q9384748" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Help%3ACreating_a_bot&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Help:Creating_a_bot&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li class="wb-otherproject-link wb-otherproject-commons mw-list-item"><a href="https://commons.wikimedia.org/wiki/Help:Bots" hreflang="en"><span>Wikimedia Commons</span></a></li><li class="wb-otherproject-link wb-otherproject-mediawiki mw-list-item"><a href="https://www.mediawiki.org/wiki/Help:Bots" hreflang="en"><span>MediaWiki</span></a></li><li class="wb-otherproject-link wb-otherproject-wikidata mw-list-item"><a href="https://www.wikidata.org/wiki/Wikidata:Creating_a_bot" hreflang="en"><span>Wikidata</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-client-prefs-landmark" aria-label="Appearance">
+						</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><style data-mw-deduplicate="TemplateStyles:r1097619167">.mw-parser-output .ombox{margin:4px 0;border-collapse:collapse;border:1px solid #a2a9b1;background-color:#f8f9fa;box-sizing:border-box}.mw-parser-output .ombox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .ombox-speedy{border:2px solid #b32424;background-color:#fee7e6}.mw-parser-output .ombox-delete{border:2px solid #b32424}.mw-parser-output .ombox-content{border:1px solid #f28500}.mw-parser-output .ombox-style{border:1px solid #fc3}.mw-parser-output .ombox-move{border:1px solid #9932cc}.mw-parser-output .ombox-protection{border:2px solid #a2a9b1}.mw-parser-output .ombox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .ombox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .ombox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .ombox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .ombox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .ombox{margin:4px 10%}.mw-parser-output .ombox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}</style><table class="plainlinks ombox ombox-notice noprint" role="presentation"><tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style="text-align:center; margin:1em 0em;"><style data-mw-deduplicate="TemplateStyles:r1129693374">.mw-parser-output .hlist dl,.mw-parser-output .hlist ol,.mw-parser-output .hlist ul{margin:0;padding:0}.mw-parser-output .hlist dd,.mw-parser-output .hlist dt,.mw-parser-output .hlist li{margin:0;display:inline}.mw-parser-output .hlist.inline,.mw-parser-output .hlist.inline dl,.mw-parser-output .hlist.inline ol,.mw-parser-output .hlist.inline ul,.mw-parser-output .hlist dl dl,.mw-parser-output .hlist dl ol,.mw-parser-output .hlist dl ul,.mw-parser-output .hlist ol dl,.mw-parser-output .hlist ol ol,.mw-parser-output .hlist ol ul,.mw-parser-output .hlist ul dl,.mw-parser-output .hlist ul ol,.mw-parser-output .hlist ul ul{display:inline}.mw-parser-output .hlist .mw-empty-li{display:none}.mw-parser-output .hlist dt::after{content:": "}.mw-parser-output .hlist dd::after,.mw-parser-output .hlist li::after{content:" · ";font-weight:bold}.mw-parser-output .hlist dd:last-child::after,.mw-parser-output .hlist dt:last-child::after,.mw-parser-output .hlist li:last-child::after{content:none}.mw-parser-output .hlist dd dd:first-child::before,.mw-parser-output .hlist dd dt:first-child::before,.mw-parser-output .hlist dd li:first-child::before,.mw-parser-output .hlist dt dd:first-child::before,.mw-parser-output .hlist dt dt:first-child::before,.mw-parser-output .hlist dt li:first-child::before,.mw-parser-output .hlist li dd:first-child::before,.mw-parser-output .hlist li dt:first-child::before,.mw-parser-output .hlist li li:first-child::before{content:" (";font-weight:normal}.mw-parser-output .hlist dd dd:last-child::after,.mw-parser-output .hlist dd dt:last-child::after,.mw-parser-output .hlist dd li:last-child::after,.mw-parser-output .hlist dt dd:last-child::after,.mw-parser-output .hlist dt dt:last-child::after,.mw-parser-output .hlist dt li:last-child::after,.mw-parser-output .hlist li dd:last-child::after,.mw-parser-output .hlist li dt:last-child::after,.mw-parser-output .hlist li li:last-child::after{content:")";font-weight:normal}.mw-parser-output .hlist ol{counter-reset:listitem}.mw-parser-output .hlist ol>li{counter-increment:listitem}.mw-parser-output .hlist ol>li::before{content:" "counter(listitem)"\a0 "}.mw-parser-output .hlist dd ol>li:first-child::before,.mw-parser-output .hlist dt ol>li:first-child::before,.mw-parser-output .hlist li ol>li:first-child::before{content:" ("counter(listitem)"\a0 "}</style><div class="hlist">
+<ul><li><b><a href="/wiki/Wikipedia:Bots" title="Wikipedia:Bots">Overview</a></b>
+<ul><li><b><a href="/wiki/Wikipedia:Bots/Dictionary" title="Wikipedia:Bots/Dictionary">Dictionary</a></b></li></ul></li>
+<li><b><a href="/wiki/Wikipedia:Bot_policy" title="Wikipedia:Bot policy">Bot policy</a></b></li>
+<li><b><a href="/wiki/Wikipedia:Bot_Approvals_Group" title="Wikipedia:Bot Approvals Group">Bot Approvals Group</a></b>
+<ul><li><b><a href="/wiki/Wikipedia:Bot_Approvals_Group/Guide" title="Wikipedia:Bot Approvals Group/Guide">Guide</a></b></li></ul></li>
+<li><b><a href="/wiki/Wikipedia:Bots/Noticeboard" title="Wikipedia:Bots/Noticeboard">Noticeboard</a></b></li>
+<li><b><a href="/wiki/Wikipedia:Bots/News" title="Wikipedia:Bots/News">Newsletter</a></b></li></ul>
+</div>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><div class="hlist">
+<ul><li><a href="/wiki/Wikipedia:Bot_requests" title="Wikipedia:Bot requests">Bot Requests</a></li>
+<li><a href="/wiki/Wikipedia:Bots/Requests_for_approval" title="Wikipedia:Bots/Requests for approval">Requests for Approval</a>
+<ul><li><a href="/wiki/Wikipedia:Bots/Requests_for_approval/Adminbots" title="Wikipedia:Bots/Requests for approval/Adminbots">Adminbots</a></li></ul></li>
+<li>{{<a href="/wiki/Template:BAG_Tools" title="Template:BAG Tools">BAG Tools</a>}}</li>
+<li><a class="mw-selflink selflink">Creating a Bot</a></li>
+<li><a href="/wiki/Special:ListUsers/bot" title="Special:ListUsers/bot">List of bots</a>
+<ul><li><a href="/wiki/Wikipedia:Bot_activity_monitor" title="Wikipedia:Bot activity monitor">Activity monitor</a></li>
+<li><a href="/wiki/User:MajavahBot/Bot_status_report" title="User:MajavahBot/Bot status report">Status report</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:History_of_Wikipedia_bots" title="Wikipedia:History of Wikipedia bots">History</a></li>
+<li><a href="/wiki/Wikipedia:Types_of_bots" title="Wikipedia:Types of bots">Types</a></li></ul>
+</div></td><td class="mbox-imageright"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/Crystal_Clear_action_run.svg/35px-Crystal_Clear_action_run.svg.png" decoding="async" width="35" height="32" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/Crystal_Clear_action_run.svg/53px-Crystal_Clear_action_run.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/35/Crystal_Clear_action_run.svg/70px-Crystal_Clear_action_run.svg.png 2x" data-file-width="140" data-file-height="127"/></span></span></td></tr></tbody></table>
+<div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Wikipedia information page</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1097619167"><table class="plainlinks ombox ombox-notice" role="presentation"><tbody><tr><td class="mbox-image"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/1/1d/Information_icon4.svg/40px-Information_icon4.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/1d/Information_icon4.svg/60px-Information_icon4.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/1d/Information_icon4.svg/80px-Information_icon4.svg.png 2x" data-file-width="620" data-file-height="620"/></span></span></td><td class="mbox-text"><div style="padding-top: 6px; padding-bottom: 5px;"><b>This is an <a href="/wiki/Wikipedia:Project_namespace#How-to_and_information_pages" title="Wikipedia:Project namespace">information page</a>.</b><br/><div style="font-size: 90%;">It is not one of <a href="/wiki/Wikipedia:Policies_and_guidelines" title="Wikipedia:Policies and guidelines">Wikipedia's policies or guidelines</a>; rather, its purpose is to explain certain aspects of Wikipedia's norms, customs, technicalities, or practices. It may reflect differing levels of <a href="/wiki/Wikipedia:Consensus" title="Wikipedia:Consensus">consensus</a> and <a href="/wiki/Wikipedia:Consensus#Achieving_consensus" title="Wikipedia:Consensus">vetting</a>.</div></div></td><td class="mbox-imageright"><style data-mw-deduplicate="TemplateStyles:r1213096230">.mw-parser-output .module-shortcutboxplain{float:right;margin:0 0 0 1em;border:1px solid #aaa;background:#fff;color:inherit;padding:0.3em 0.6em 0.2em 0.6em;text-align:center;font-size:85%}.mw-parser-output .module-shortcutboxleft{float:left;margin:0 1em 0 0}.mw-parser-output .module-shortcutlist{display:inline-block;border-bottom:1px solid #aaa;margin-bottom:0.2em}.mw-parser-output .module-shortcutboxplain ul{font-weight:bold}.mw-parser-output .module-shortcutanchordiv{position:relative;top:-3em}.mw-parser-output li .module-shortcutanchordiv{float:right}.mw-parser-output .mbox-imageright .module-shortcutboxplain{padding:0.4em 1em 0.4em 1em;line-height:1.3;margin:0}</style><div class="module-shortcutanchordiv"><span id="WP:CAB"></span><span id="WP:CREATEBOT"></span><span id="WP:MKBOT"></span></div><div class="module-shortcutboxplain noprint" role="note"><div class="module-shortcutlist"><a href="/wiki/Wikipedia:Shortcut" title="Wikipedia:Shortcut">Shortcuts</a></div><style data-mw-deduplicate="TemplateStyles:r1126788409">.mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}</style><div class="plainlist"><ul><li><span class="plainlinks"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Wikipedia:CAB&amp;redirect=no">WP:CAB</a></span></li><li><span class="plainlinks"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Wikipedia:CREATEBOT&amp;redirect=no">WP:CREATEBOT</a></span></li><li><span class="plainlinks"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Wikipedia:MKBOT&amp;redirect=no">WP:MKBOT</a></span></li></ul></div></div></td></tr></tbody></table>
+<p><b>Robots</b> or <b><a href="/wiki/Wikipedia:Bots" title="Wikipedia:Bots">bots</a></b> are automatic processes that interact with Wikipedia (and other Wikimedia projects) as though they were human editors. This page attempts to explain how to carry out the development of a bot for use on Wikimedia projects and much of this is transferable to other wikis based on MediaWiki. The explanation is geared mainly towards those who have some prior programming experience, but are unsure of how to apply this knowledge to creating a Wikipedia bot.
+</p>
+<meta property="mw:PageProp/toc"/>
+<div class="mw-heading mw-heading2 ext-discussiontools-init-section"><h2 data-mw-thread-id="h-Why_would_I_need_to_create_a_bot?"><span id="Why_would_I_need_to_create_a_bot.3F"></span><span class="mw-headline" id="Why_would_I_need_to_create_a_bot?"><span data-mw-comment-start="" id="h-Why_would_I_need_to_create_a_bot?"></span>Why would I need to create a bot?<span data-mw-comment-end="h-Why_would_I_need_to_create_a_bot?"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=1" title="Edit section: Why would I need to create a bot?"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2><!--__DTELLIPSISBUTTON__{"threadItem":{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Why_would_I_need_to_create_a_bot?","replies":[]}}--></div>
+<p>Bots can automate tasks and perform them much faster than humans. If you have a simple task that you need to perform lots of times (an example might be to add a <a href="/wiki/Wikipedia:Template_messages" class="mw-redirect" title="Wikipedia:Template messages">template</a> to all pages in a category with 1000 pages), then this is a task better suited to a bot than a human.
+</p>
+<div class="mw-heading mw-heading2 ext-discussiontools-init-section"><h2 data-mw-thread-id="h-Considerations_before_creating_a_bot"><span class="mw-headline" id="Considerations_before_creating_a_bot"><span data-mw-comment-start="" id="h-Considerations_before_creating_a_bot"></span>Considerations before creating a bot<span data-mw-comment-end="h-Considerations_before_creating_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=2" title="Edit section: Considerations before creating a bot"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2><!--__DTELLIPSISBUTTON__{"threadItem":{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Considerations_before_creating_a_bot","replies":["h-Reuse_existing_bots-Considerations_before_creating_a_bot","h-Reuse_codebase-Considerations_before_creating_a_bot","h-Important_questions-Considerations_before_creating_a_bot"]}}--></div>
+<h3 data-mw-thread-id="h-Reuse_existing_bots-Considerations_before_creating_a_bot"><span class="mw-headline" id="Reuse_existing_bots"><span data-mw-comment-start="" id="h-Reuse_existing_bots-Considerations_before_creating_a_bot"></span>Reuse existing bots<span data-mw-comment-end="h-Reuse_existing_bots-Considerations_before_creating_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=3" title="Edit section: Reuse existing bots"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>It is often far simpler to request a bot job from an existing bot. If you have only periodic requests or are uncomfortable with programming, this is usually the best solution. These requests can be made at <a href="/wiki/Wikipedia:Bot_requests" title="Wikipedia:Bot requests">Wikipedia:Bot requests</a>. In addition, there are a number of tools available to anyone. Most of these take the form of enhanced web browsers with MediaWiki-specific functionality. The most popular of these is <a href="/wiki/Wikipedia:AutoWikiBrowser" title="Wikipedia:AutoWikiBrowser">AutoWikiBrowser</a> (AWB), a browser specifically designed to assist with editing on Wikipedia and other Wikimedia projects. A mostly complete list of tools can be found at <a href="/wiki/Wikipedia:Tools/Editing_tools" title="Wikipedia:Tools/Editing tools">Wikipedia:Tools/Editing tools</a>. Tools, such as AWB, can often be operated with little or no understanding of programming.
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1097619167"><table class="plainlinks ombox ombox-notice" role="presentation"><tbody><tr><td class="mbox-image"><figure class="mw-halign-right" typeof="mw:File"><a href="/wiki/File:Crystal_Clear_app_ktip.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Crystal_Clear_app_ktip.svg/40px-Crystal_Clear_app_ktip.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Crystal_Clear_app_ktip.svg/60px-Crystal_Clear_app_ktip.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Crystal_Clear_app_ktip.svg/80px-Crystal_Clear_app_ktip.svg.png 2x" data-file-width="128" data-file-height="128"/></a><figcaption></figcaption></figure></td><td class="mbox-text"><div><span style="font-size:110%;"><b>Tip</b></span></div>
+Use <a class="external text" href="https://toolhub.wikimedia.org/">Toolhub</a> to explore available tools.</td></tr></tbody></table>
+<h3 data-mw-thread-id="h-Reuse_codebase-Considerations_before_creating_a_bot"><span class="mw-headline" id="Reuse_codebase"><span data-mw-comment-start="" id="h-Reuse_codebase-Considerations_before_creating_a_bot"></span>Reuse codebase<span data-mw-comment-end="h-Reuse_codebase-Considerations_before_creating_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=4" title="Edit section: Reuse codebase"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If you decide you need a bot of your own due to the frequency or novelty of your requirements, you don't need to write one from scratch. There are already a <a href="/wiki/Wikipedia:BAM#Current_status_report" class="mw-redirect" title="Wikipedia:BAM">number of bots running on Wikipedia</a> and many of these bots publish their source code, which can sometimes be reused with little additional development time. There are also a number of standard bot frameworks available. Modifying an existing bot or using a framework greatly speeds development time. Also, because these code bases are in common usage and are maintained community projects, it is far easier to get bots based on these frameworks approved for use. The most popular and common of these frameworks is <a href="https://www.mediawiki.org/wiki/Manual:Pywikibot" class="extiw" title="mw:Manual:Pywikibot">Pywikibot</a> (PWB), a bot framework written in <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>. It is thoroughly documented and tested and many standardized Pywikibot scripts (bot instructions) are already available. Other examples of bot frameworks can be found <a href="#Programming_languages_and_libraries">below</a>. For some of these bot frameworks, such as PWB, a general familiarity with scripts is all that is necessary to run the bot successfully (it is important to update these frameworks regularly).
+</p>
+<h3 data-mw-thread-id="h-Important_questions-Considerations_before_creating_a_bot"><span class="mw-headline" id="Important_questions"><span data-mw-comment-start="" id="h-Important_questions-Considerations_before_creating_a_bot"></span>Important questions<span data-mw-comment-end="h-Important_questions-Considerations_before_creating_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=5" title="Edit section: Important questions"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Writing a new bot requires significant programming ability. A completely new bot must undergo substantial testing before it will be approved for regular operation. To write a successful bot, planning is crucial. The following considerations are important:
+</p>
+<ul><li>Will the bot be manually assisted or fully automated?</li>
+<li>Will you create the bot alone, or with the help of other programmers?</li>
+<li>Will the bot's requests, edits, or other actions be logged? If so, will the logs be stored on local media, or on wiki pages?</li>
+<li>Will the bot run inside a web browser (for example, written in JavaScript), or will it be a standalone program?</li>
+<li>If the bot is a standalone program, will it run on your local computer, or on a remote server such as the <a href="https://wikitech.wikimedia.org/wiki/Portal:Toolforge" class="extiw" title="wikitech:Portal:Toolforge">Toolforge</a>?</li>
+<li>If the bot runs on a remote server, will other editors be able to operate the bot or start it running?</li></ul>
+<div class="mw-heading mw-heading2 ext-discussiontools-init-section"><h2 data-mw-thread-id="h-How_does_a_Wikipedia_bot_work?"><span id="How_does_a_Wikipedia_bot_work.3F"></span><span class="mw-headline" id="How_does_a_Wikipedia_bot_work?"><span data-mw-comment-start="" id="h-How_does_a_Wikipedia_bot_work?"></span>How does a Wikipedia bot work?<span data-mw-comment-end="h-How_does_a_Wikipedia_bot_work?"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=6" title="Edit section: How does a Wikipedia bot work?"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2><!--__DTELLIPSISBUTTON__{"threadItem":{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-How_does_a_Wikipedia_bot_work?","replies":["h-Overview_of_operation-How_does_a_Wikipedia_bot_work?","h-APIs_for_bots-How_does_a_Wikipedia_bot_work?","h-Logging_in-How_does_a_Wikipedia_bot_work?","h-Editing;_edit_tokens-How_does_a_Wikipedia_bot_work?","h-Edit_conflicts-How_does_a_Wikipedia_bot_work?"]}}--></div>
+<h3 data-mw-thread-id="h-Overview_of_operation-How_does_a_Wikipedia_bot_work?"><span class="mw-headline" id="Overview_of_operation"><span data-mw-comment-start="" id="h-Overview_of_operation-How_does_a_Wikipedia_bot_work?"></span>Overview of operation<span data-mw-comment-end="h-Overview_of_operation-How_does_a_Wikipedia_bot_work?"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=7" title="Edit section: Overview of operation"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure class="mw-halign-left" typeof="mw:File"><a href="/wiki/File:Wikieditcycle.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Wikieditcycle.png/180px-Wikieditcycle.png" decoding="async" width="180" height="145" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/0/0e/Wikieditcycle.png 1.5x" data-file-width="229" data-file-height="184"/></a><figcaption></figcaption></figure>
+<p>Just like a human editor, a Wikipedia bot reads Wikipedia pages, and makes changes where it thinks changes need to be made. The difference is that, although bots are faster and less prone to fatigue than humans, they are nowhere near as bright as we are. Bots are good at repetitive tasks that have easily defined patterns, where few decisions have to be made.
+</p><p>In the most typical case, a bot logs in to its own account and requests pages from Wikipedia in much the same way as a browser does – although it does not display the page on screen, but works on it in memory – and then programmatically examines the page code to see if any changes need to be made. It then makes and submits whatever edits it was designed to do, again in much the same way a browser would.
+</p><p>Because bots access pages the same way people do, bots can experience the same kind of difficulties that human users do. They can get caught in edit conflicts, have page timeouts, or run across other unexpected complications while requesting pages or making edits. Because the volume of work done by a bot is larger than that done by a live person, the bot is more likely to encounter these issues. Thus, it is important to consider these situations when writing a bot.
+</p>
+<h3 data-mw-thread-id="h-APIs_for_bots-How_does_a_Wikipedia_bot_work?"><span class="mw-headline" id="APIs_for_bots"><span data-mw-comment-start="" id="h-APIs_for_bots-How_does_a_Wikipedia_bot_work?"></span>APIs for bots<span data-mw-comment-end="h-APIs_for_bots-How_does_a_Wikipedia_bot_work?"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=8" title="Edit section: APIs for bots"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In order to make changes to Wikipedia pages, a bot necessarily has to retrieve pages from Wikipedia and send edits back. There are several <a href="/wiki/Application_programming_interface" class="mw-redirect" title="Application programming interface">application programming interfaces</a> (APIs) available for that purpose.
+</p>
+<ul><li><a href="https://www.mediawiki.org/wiki/API:Main_page" class="extiw" title="mw:API:Main page">MediaWiki API</a> (<a href="/wiki/Special:ApiHelp" title="Special:ApiHelp"><code>api.php</code></a>). This library was specifically written to permit automated processes such as bots to make queries and post changes. Data is returned in <a href="/wiki/JSON" title="JSON">JSON</a> format (see <a href="https://www.mediawiki.org/wiki/API:Data_formats#Output" class="extiw" title="mw:API:Data formats">output formats</a> for more details).
+<dl><dd><b>Status:</b> Built-in feature of MediaWiki, available on all Wikimedia servers. Other non-Wikimedia wikis may disable or restrict write access.</dd>
+<dd>There is also an <a href="/wiki/Special:ApiSandbox" title="Special:ApiSandbox">API sandbox</a> for those wanting to test api.php's features.</dd></dl></li>
+<li><a href="/wiki/Special:Export" title="Special:Export">Special:Export</a> can be used to obtain bulk export of page content in XML form. See <a href="https://www.mediawiki.org/wiki/Manual:Parameters_to_Special:Export" class="extiw" title="mw:Manual:Parameters to Special:Export">Manual:Parameters to Special:Export</a> for arguments;
+<dl><dd><b>Status:</b> Built-in feature of MediaWiki, available on all Wikimedia servers.</dd></dl></li>
+<li>Raw (Wikitext) page processing: sending an <code>action=raw</code> or an <code>action=raw&amp;templates=expand</code> GET request to index.php will give the unprocessed wikitext source code of a page. For example: <code><a class="external free" href="https://en.wikipedia.org/w/index.php?title=Help:Creating_a_bot&amp;action=raw">https://en.wikipedia.org/w/index.php?title=Help:Creating_a_bot&amp;action=raw</a></code>. An API query with <code>action=query&amp;prop=revisions&amp;rvprop=content</code> or <code>action=query&amp;prop=revisions&amp;rvprop=content&amp;rvexpandtemplates=1</code> is roughly equivalent, and allows for retrieving additional information.
+<dl><dd><b>Status:</b> Built-in feature of MediaWiki, available on all Wikimedia servers.</dd></dl></li></ul>
+<p>Some Wikipedia web servers are configured to grant requests for compressed (<a href="/wiki/GZIP" class="mw-redirect" title="GZIP">GZIP</a>) content. This can be done by including a line "Accept-Encoding: gzip" in the HTTP request header; if the HTTP reply header contains "Content-Encoding: gzip", the document is in GZIP form, otherwise, it is in the regular uncompressed form. Note that this is specific to the web server and not to the MediaWiki software. Other sites employing MediaWiki may not have this feature. If you are using an existing bot framework, it should handle low-level operations like this.
+</p>
+<h3 data-mw-thread-id="h-Logging_in-How_does_a_Wikipedia_bot_work?"><span class="mw-headline" id="Logging_in"><span data-mw-comment-start="" id="h-Logging_in-How_does_a_Wikipedia_bot_work?"></span>Logging in<span data-mw-comment-end="h-Logging_in-How_does_a_Wikipedia_bot_work?"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=9" title="Edit section: Logging in"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Approved bots need to be logged in to make edits. Although a bot can make read requests without logging in, bots that have completed testing should log in for all activities. Bots logged in from an account with the bot flag can obtain more results per query from the MediaWiki API (api.php). Most bot frameworks should handle login and cookies automatically, but if you are not using an existing framework, you will need to follow these steps.
+</p><p>For security, login data must be passed using the <a href="/wiki/HTTP_POST" class="mw-redirect" title="HTTP POST">HTTP POST</a> method. Because parameters of <a href="/wiki/HTTP_GET" class="mw-redirect" title="HTTP GET">HTTP GET</a> requests are easily visible in URL, logins via GET are disabled.
+</p><p>To log a bot in using the <a href="https://www.mediawiki.org/wiki/API" class="extiw" title="mw:API">MediaWiki API</a>, two requests are needed:
+</p><p><b>Request 1 – this is a GET request to obtain a login token</b>
+</p>
+<ul><li>URL: <code><a class="external free" href="https://en.wikipedia.org/w/api.php?action=query&amp;meta=tokens&amp;type=login&amp;format=json">https://en.wikipedia.org/w/api.php?action=query&amp;meta=tokens&amp;type=login&amp;format=json</a></code></li></ul>
+<p><b>Request 2 – this is a POST to complete the login</b>
+</p>
+<ul><li>URL: <code><a class="external free" href="https://en.wikipedia.org/w/api.php?action=login&amp;format=json">https://en.wikipedia.org/w/api.php?action=login&amp;format=json</a></code></li>
+<li>POST parameters:
+<ul><li><code>lgname=BOTUSERNAME</code></li>
+<li><code>lgpassword=BOTPASSWORD</code></li>
+<li><code>lgtoken=TOKEN</code></li></ul></li></ul>
+<p>where TOKEN is the token from the previous result. The HTTP cookies from the previous request must also be passed with the second request.
+</p><p>A successful login attempt will result in the Wikimedia server setting several <a href="/wiki/HTTP_cookie" title="HTTP cookie">HTTP cookies</a>. The bot must save these cookies and send them back every time it makes a request (this is particularly crucial for editing). On the English Wikipedia, the following cookies should be used: <b>enwikiUserID</b>, <b>enwikiToken</b>, and <b>enwikiUserName</b>. The <b>enwiki_session</b> cookie is required to actually send an edit or commit some change, otherwise the <a href="/wiki/MediaWiki:Session_fail_preview" title="MediaWiki:Session fail preview">MediaWiki:Session fail preview</a> error message will be returned.
+</p><p>Main-account login via "action=login" is deprecated and may stop working without warning. To continue login with "action=login", see <a href="/wiki/Special:BotPasswords" title="Special:BotPasswords">Special:BotPasswords</a>.
+</p>
+<h3 data-mw-thread-id="h-Editing;_edit_tokens-How_does_a_Wikipedia_bot_work?"><span id="Editing.3B_edit_tokens"></span><span class="mw-headline" id="Editing;_edit_tokens"><span data-mw-comment-start="" id="h-Editing;_edit_tokens-How_does_a_Wikipedia_bot_work?"></span>Editing; edit tokens<span data-mw-comment-end="h-Editing;_edit_tokens-How_does_a_Wikipedia_bot_work?"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=10" title="Edit section: Editing; edit tokens"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Wikipedia uses a system of <a href="https://www.mediawiki.org/wiki/Manual:Edit_token" class="extiw" title="mw:Manual:Edit token">edit tokens</a> for making edits to Wikipedia pages, as well as other operations that modify existing content such as rollback. The token looks like a long hexadecimal number followed by '+\', for example:<br/>
+</p>
+<dl><dd><b>d41d8cd98f00b204e9800998ecf8427e+\</b><br/></dd></dl>
+<p>The role of edit tokens is to prevent "edit hijacking", where users are tricked into making an edit by clicking a single link.
+</p><p>The editing process involves two HTTP requests. First, a request for an edit token must be made. Then, a second HTTP request must be made that sends the new content of the page along with the edit token just obtained. It is not possible to make an edit in a single HTTP request. An edit token remains the same for the duration of a logged-in session, so the edit token needs to be retrieved only once and can be used for all subsequent edits.
+</p><p>To obtain an edit token, follow these steps:
+</p>
+<ul>
+<li><b>MediaWiki API (api.php)</b>. Make a request with the following parameters (see <a href="https://www.mediawiki.org/wiki/API:Edit_-_Create%26Edit_pages" class="extiw" title="mw:API:Edit - Create&amp;Edit pages">mw:API:Edit - Create&amp;Edit pages</a>).
+<ul>
+<li><code>action=query</code></li>
+<li><code>meta=tokens</code></li>
+</ul>
+<p>The token will be returned in the <code>csrftoken</code> attribute of the response.
+</p>
+</li>
+</ul>
+<p>The URL will look something like this: <code><a class="external free" href="https://en.wikipedia.org/w/api.php?action=query&amp;meta=tokens&amp;format=json">https://en.wikipedia.org/w/api.php?action=query&amp;meta=tokens&amp;format=json</a></code>
+</p><p>If the edit token the bot receives does not have the hexadecimal string (<i>i.e.</i>, the edit token is just '+\') then the bot most likely is not logged in. This might be due to a number of factors: failure in authentication with the server, a dropped connection, a timeout of some sort, or an error in storing or returning the correct cookies. If it is not because of a programming error, just log in again to refresh the login cookies. The bots <i>must</i> use <a href="https://www.mediawiki.org/wiki/API:Assert" class="extiw" title="mw:API:Assert">assertion</a> to make sure that they are logged in.
+</p>
+<h3 data-mw-thread-id="h-Edit_conflicts-How_does_a_Wikipedia_bot_work?"><span class="mw-headline" id="Edit_conflicts"><span data-mw-comment-start="" id="h-Edit_conflicts-How_does_a_Wikipedia_bot_work?"></span>Edit conflicts<span data-mw-comment-end="h-Edit_conflicts-How_does_a_Wikipedia_bot_work?"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=11" title="Edit section: Edit conflicts"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Edit conflicts occur when multiple, overlapping edit attempts are made on the same page. Almost every bot <i>will</i> eventually get caught in an edit conflict of one sort or another, and should include some mechanism to test for and accommodate these issues.
+</p><p>Bots that use the Mediawiki API (api.php) should retrieve the edit token, along with the <code>starttimestamp</code> and the last revision "base" timestamp, <i>before</i> loading the page text in preparation for the edit; <code>prop=info|revisions</code> can be used to retrieve both the token and page contents in one query (<span class="plainlinks"><a class="external text" href="https://en.wikipedia.org/w/api.php?action=query&amp;titles=Wikipedia:Sandbox&amp;prop=info%7Crevisions&amp;inprop=&amp;intoken=edit&amp;rvprop=timestamp%7Ccontent">example</a></span>). When submitting the edit, set the <code>starttimestamp</code> and <code>basetimestamp</code> attributes, and check the server responses for indications of errors. For more details, see <a href="https://www.mediawiki.org/wiki/API:Edit" class="extiw" title="mw:API:Edit">MediaWiki:API:Edit - Create and Edit pages</a>.
+</p><p>Generally speaking, if an edit fails to complete the bot should check the page again before trying to make a new edit, to make sure the edit is still appropriate. Further, if a bot rechecks a page to resubmit a change, it should be careful to avoid any behavior that could lead to an infinite loop and any behavior that could even resemble <a href="/wiki/Wikipedia:EW" class="mw-redirect" title="Wikipedia:EW">edit warring</a>.
+</p>
+<div class="mw-heading mw-heading2 ext-discussiontools-init-section"><h2 data-mw-thread-id="h-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Overview_of_the_process_of_developing_a_bot"><span data-mw-comment-start="" id="h-Overview_of_the_process_of_developing_a_bot"></span>Overview of the process of developing a bot<span data-mw-comment-end="h-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=12" title="Edit section: Overview of the process of developing a bot"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2><!--__DTELLIPSISBUTTON__{"threadItem":{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Overview_of_the_process_of_developing_a_bot","replies":["h-Idea-Overview_of_the_process_of_developing_a_bot","h-Specification-Overview_of_the_process_of_developing_a_bot","h-Software_architecture-Overview_of_the_process_of_developing_a_bot","h-Implementation-Overview_of_the_process_of_developing_a_bot","h-Testing-Overview_of_the_process_of_developing_a_bot","h-Documentation-Overview_of_the_process_of_developing_a_bot","h-Queries\/Complaints-Overview_of_the_process_of_developing_a_bot","h-Maintenance-Overview_of_the_process_of_developing_a_bot"]}}--></div>
+<p>Actually, coding or writing a bot is only one part of developing a bot. You should generally follow the development cycle below to ensure that your bot follows <a href="/wiki/Wikipedia:Bot_policy" title="Wikipedia:Bot policy">Wikipedia's bot policy</a>. Failure to comply with the policy may lead to your bot failing to be approved or being blocked from editing Wikipedia.
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Thumb"><a href="/wiki/File:Bot_development_cycle.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Bot_development_cycle.svg/600px-Bot_development_cycle.svg.png" decoding="async" width="600" height="538" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Bot_development_cycle.svg/900px-Bot_development_cycle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Bot_development_cycle.svg/1200px-Bot_development_cycle.svg.png 2x" data-file-width="580" data-file-height="520"/></a><figcaption>Overview of Wikipedia bot development cycle</figcaption></figure>
+<h4 data-mw-thread-id="h-Idea-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Idea"><span data-mw-comment-start="" id="h-Idea-Overview_of_the_process_of_developing_a_bot"></span>Idea<span data-mw-comment-end="h-Idea-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=13" title="Edit section: Idea"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li>The first task in creating a Wikipedia bot is extracting the requirements or coming up with an idea. If you don't have an idea of what to write a bot for, you could pick up ideas at <a href="/wiki/Wikipedia:Bot_requests" title="Wikipedia:Bot requests">requests for work to be done by a bot</a>.</li>
+<li>Make sure an existing bot isn't already doing what you think your bot should do. To see what tasks are already being performed by a bot, see <a href="/wiki/Wikipedia:Bot_activity_monitor" title="Wikipedia:Bot activity monitor">the list of currently operating bots</a>.</li></ul>
+<h4 data-mw-thread-id="h-Specification-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Specification"><span data-mw-comment-start="" id="h-Specification-Overview_of_the_process_of_developing_a_bot"></span>Specification<span data-mw-comment-end="h-Specification-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=14" title="Edit section: Specification"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><a href="/wiki/Formal_specification" title="Formal specification">Specification</a> is the task of precisely describing the software to be written, possibly in a rigorous way. You should come up with a detailed proposal of what you want it to do. Try to discuss this proposal with some editors and refine it based on feedback. Even a great idea can be made better by incorporating ideas from other editors.</li>
+<li>In the most basic form, your specified bot must meet the following criteria:
+<ul><li>The bot is harmless (it must not make edits that could be considered disruptive to the smooth running of the encyclopedia)</li>
+<li>The bot is useful (it provides a useful service more effectively than a human editor could)</li>
+<li>The bot does not waste server resources.</li></ul></li></ul>
+<h4 data-mw-thread-id="h-Software_architecture-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Software_architecture"><span data-mw-comment-start="" id="h-Software_architecture-Overview_of_the_process_of_developing_a_bot"></span>Software architecture<span data-mw-comment-end="h-Software_architecture-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=15" title="Edit section: Software architecture"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li>Think about <b>how</b> you might create a bot, and which programming language(s) and tools you would use. <a href="/wiki/Software_architecture" title="Software architecture">Architecture</a> is concerned with making sure the software system will meet the requirements of the product as well as ensuring that future requirements can be addressed. Certain programming languages are better suited to some tasks than others, for more details see <a href="#Programming_languages_and_libraries">§ Programming languages and libraries</a>.</li></ul>
+<h4 data-mw-thread-id="h-Implementation-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Implementation"><span data-mw-comment-start="" id="h-Implementation-Overview_of_the_process_of_developing_a_bot"></span>Implementation<span data-mw-comment-end="h-Implementation-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=16" title="Edit section: Implementation"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Computer_programming" title="Computer programming">Implementation</a> (or coding) involves turning design and planning into code. It may be the most obvious part of the software engineering job, but it is not necessarily the largest portion. In the implementation stage you should:
+</p>
+<ul><li>Create an account for your bot. Click <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;type=signup">here</a> when logged in to create the account, linking it to yours. (If you do not create the bot account while logged in, it is likely to be blocked as a possible <a href="/wiki/Wikipedia:SOCK" class="mw-redirect" title="Wikipedia:SOCK">sockpuppet</a> or unauthorised bot until you verify ownership)</li>
+<li>Create a user page for your bot. Your bot's edits must not be made under your own account. Your bot will need its own account with its own username and password.</li>
+<li>Add the same information to the user page of the bot. It would be a good idea to add a link to the approval page (whether approved or not) for each function.</li></ul>
+<h4 data-mw-thread-id="h-Testing-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Testing"><span data-mw-comment-start="" id="h-Testing-Overview_of_the_process_of_developing_a_bot"></span>Testing<span data-mw-comment-end="h-Testing-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=17" title="Edit section: Testing"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A good way of testing your bot as you are developing is to have it show the changes (if any) it would have made to a page, rather than actually editing the live wiki. Some bot frameworks (such as <a href="https://www.mediawiki.org/wiki/Manual:Pywikibot" class="extiw" title="mw:Manual:Pywikibot"> pywikibot</a>) have pre-coded methods for showing diffs. During the <a href="/wiki/Wikipedia:BRFA" class="mw-redirect" title="Wikipedia:BRFA">approvals process</a>, the bot will most likely be given a trial period (usually with a restriction on the number of edits or days it is to run for) during which it may actually edit to enable fine-tuning and iron out any bugs. At the end of the trial period, if everything went according to plan, the bot should get approval for full-scale operation.
+</p>
+<h4 data-mw-thread-id="h-Documentation-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Documentation"><span data-mw-comment-start="" id="h-Documentation-Overview_of_the_process_of_developing_a_bot"></span>Documentation<span data-mw-comment-end="h-Documentation-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=18" title="Edit section: Documentation"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>An important (and often overlooked) task is <a href="/wiki/Software_documentation" title="Software documentation">documenting</a> the internal design of your bot for the purpose of future maintenance and enhancement. This is especially important if you are going to allow clones of your bot. Ideally, you should post the source code of your bot on its userpage or in a revision control system (see <a href="#Open-source_bots">#Open-source bots</a>) if you want others to be able to run clones of it. This code should be well documented (usually using comments) for ease of use.
+</p>
+<h4 data-mw-thread-id="h-Queries/Complaints-Overview_of_the_process_of_developing_a_bot"><span id="Queries.2FComplaints"></span><span class="mw-headline" id="Queries/Complaints"><span data-mw-comment-start="" id="h-Queries/Complaints-Overview_of_the_process_of_developing_a_bot"></span>Queries/Complaints<span data-mw-comment-end="h-Queries/Complaints-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=19" title="Edit section: Queries/Complaints"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>You should be ready to respond to queries about or objections to your bot on your user talk page, especially if it is operating in a potentially sensitive area, such as <a href="/wiki/Wikipedia:FU" class="mw-redirect" title="Wikipedia:FU">fair-use image cleanup</a>.
+</p>
+<h4 data-mw-thread-id="h-Maintenance-Overview_of_the_process_of_developing_a_bot"><span class="mw-headline" id="Maintenance"><span data-mw-comment-start="" id="h-Maintenance-Overview_of_the_process_of_developing_a_bot"></span>Maintenance<span data-mw-comment-end="h-Maintenance-Overview_of_the_process_of_developing_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=20" title="Edit section: Maintenance"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Software_maintenance" title="Software maintenance">Maintaining</a> and enhancing your bot to cope with newly discovered bugs or new requirements can take far more time than the initial development of the software. To ease maintenance, document your code from the beginning.
+</p><p>Major functionality changes of approved bots must be <a href="/wiki/Wikipedia:Bots/Requests_for_approval" title="Wikipedia:Bots/Requests for approval">approved</a>.
+</p>
+<div class="mw-heading mw-heading2 ext-discussiontools-init-section"><h2 data-mw-thread-id="h-General_guidelines_for_running_a_bot"><span class="mw-headline" id="General_guidelines_for_running_a_bot"><span data-mw-comment-start="" id="h-General_guidelines_for_running_a_bot"></span>General guidelines for running a bot<span data-mw-comment-end="h-General_guidelines_for_running_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=21" title="Edit section: General guidelines for running a bot"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2><!--__DTELLIPSISBUTTON__{"threadItem":{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-General_guidelines_for_running_a_bot","replies":["h-Bot_best_practices-General_guidelines_for_running_a_bot","h-Common_bot_features_you_should_consider_implementing-General_guidelines_for_running_a_bot"]}}--></div>
+<p>In addition to the official bot policy, which covers the main points to consider when developing your bot, there are a number of more general advisory points to consider when developing your bot.
+</p>
+<h3 data-mw-thread-id="h-Bot_best_practices-General_guidelines_for_running_a_bot"><span class="mw-headline" id="Bot_best_practices"><span data-mw-comment-start="" id="h-Bot_best_practices-General_guidelines_for_running_a_bot"></span>Bot best practices<span data-mw-comment-end="h-Bot_best_practices-General_guidelines_for_running_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=22" title="Edit section: Bot best practices"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Set a custom <a href="/wiki/User_agent" title="User agent">User-Agent</a> header for your bot, per the <a href="https://meta.wikimedia.org/wiki/User-Agent_policy" class="extiw" title="meta:User-Agent policy">Wikimedia User-Agent policy</a>. If you don't, your bot may encounter errors and may end up blocked by the technical staff at the server level.</li>
+<li>Use the <a href="https://www.mediawiki.org/wiki/Manual:Maxlag_parameter" class="extiw" title="mw:Manual:Maxlag parameter">maxlag parameter</a> with a maximum lag of 5 seconds. This will enable the bot to run quickly when server load is low, and throttle the bot when server load is high.
+<ul><li>If writing a bot in a framework that does not support maxlag, limit the total requests (read and write requests together) to no more than 10/minute.</li></ul></li>
+<li>Use the <a href="https://www.mediawiki.org/wiki/API" class="extiw" title="mw:API">API</a> whenever possible, and set the query limits to the largest values that the server permits, to minimize the total number of requests that must be made.</li>
+<li>Edit (write) requests are more expensive in server time than read requests. Be edit-light and design your code to keep edits to a minimum.
+<ul><li>Try to consolidate edits. One single large edit is better than 10 smaller ones.</li></ul></li>
+<li>Enable <a href="/wiki/HTTP_persistent_connection" title="HTTP persistent connection">HTTP persistent connections</a> and <a href="/wiki/HTTP_compression" title="HTTP compression">compression</a> in your HTTP client library, if possible.</li>
+<li>Do not make multi-threaded requests. Wait for one server request to complete before beginning another.</li>
+<li>Back off upon receiving errors from the server. Errors such as timeouts are often an indication of heavy server load. Use <a href="/wiki/Exponential_backoff" title="Exponential backoff">a sequence of increasingly longer delays between repeated requests</a>.</li>
+<li>Make use of <a href="https://www.mediawiki.org/wiki/API:Assert" class="extiw" title="mw:API:Assert">assertion</a> to ensure your bot is logged in.</li>
+<li>Test your code thoroughly before making large automated runs. Individually examine all edits on trial runs to verify they are perfect.</li></ul>
+<h3 data-mw-thread-id="h-Common_bot_features_you_should_consider_implementing-General_guidelines_for_running_a_bot"><span class="mw-headline" id="Common_bot_features_you_should_consider_implementing"><span data-mw-comment-start="" id="h-Common_bot_features_you_should_consider_implementing-General_guidelines_for_running_a_bot"></span>Common bot features you should consider implementing<span data-mw-comment-end="h-Common_bot_features_you_should_consider_implementing-General_guidelines_for_running_a_bot"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=23" title="Edit section: Common bot features you should consider implementing"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4 data-mw-thread-id="h-Manual_assistance-Common_bot_features_you_should_consider_implementing"><span class="mw-headline" id="Manual_assistance"><span data-mw-comment-start="" id="h-Manual_assistance-Common_bot_features_you_should_consider_implementing"></span>Manual assistance<span data-mw-comment-end="h-Manual_assistance-Common_bot_features_you_should_consider_implementing"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=24" title="Edit section: Manual assistance"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>If your bot is doing anything that requires judgment or evaluation of context (e.g., correcting spelling) then you should consider making your bot manually-assisted, which means that a human verifies all edits before they are saved. This significantly reduces the bot's speed, but it also significantly reduces errors.
+</p>
+<h4 data-mw-thread-id="h-Disabling_the_bot-Common_bot_features_you_should_consider_implementing"><span class="mw-headline" id="Disabling_the_bot"><span data-mw-comment-start="" id="h-Disabling_the_bot-Common_bot_features_you_should_consider_implementing"></span>Disabling the bot<span data-mw-comment-end="h-Disabling_the_bot-Common_bot_features_you_should_consider_implementing"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=25" title="Edit section: Disabling the bot"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>It should be easy to quickly disable your bot. If your bot goes bad, it is your responsibility to clean up after it! You could have the bot refuse to run if a message has been left on its talk page, on the assumption that the message may be a complaint against its activities; this can be checked using the API <code>meta=userinfo</code> query (<span class="plainlinks"><a class="external text" href="https://en.wikipedia.org/w/api.php?action=query&amp;meta=userinfo&amp;uiprop=hasmsg">example</a></span>). Or you could have a page that will turn the bot off when changed; this can be checked by loading the page contents before each edit.
+</p>
+<h4 data-mw-thread-id="h-Signature-Common_bot_features_you_should_consider_implementing"><span class="mw-headline" id="Signature"><span data-mw-comment-start="" id="h-Signature-Common_bot_features_you_should_consider_implementing"></span>Signature<span data-mw-comment-end="h-Signature-Common_bot_features_you_should_consider_implementing"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=26" title="Edit section: Signature"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Just like a human, if your bot makes edits to a talk page on Wikipedia, it should sign its post with four tildes (~~~~). Signatures belong <b>only</b> on talk namespaces with the exception of project pages used for discussion (e.g., <a href="/wiki/Wikipedia:AFD" class="mw-redirect" title="Wikipedia:AFD">articles for deletion</a>).
+</p>
+<h4 data-mw-thread-id="h-Bot_Flag-Common_bot_features_you_should_consider_implementing"><span class="mw-headline" id="Bot_Flag"><span data-mw-comment-start="" id="h-Bot_Flag-Common_bot_features_you_should_consider_implementing"></span>Bot Flag<span data-mw-comment-end="h-Bot_Flag-Common_bot_features_you_should_consider_implementing"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=27" title="Edit section: Bot Flag"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A bot's edits will be visible at <a href="/wiki/Special:RecentChanges" title="Special:RecentChanges">Special:RecentChanges</a>, unless the edits are set to indicate a bot. Once the bot has been approved and given its bot flag permission, one can add "bot=True" to the API call - see <a href="https://www.mediawiki.org/wiki/API:Edit#Parameters" class="extiw" title="mw:API:Edit">mw:API:Edit#Parameters</a> in order to hide the bot's edits in <a href="/wiki/Special:RecentChanges" title="Special:RecentChanges">Special:RecentChanges</a>. In Python, using either mwclient or wikitools, then adding <b><span style="color:green;">bot=True</span></b> to the edit/save command will set the edit as a bot edit - e.g. <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">PageObject.edit(text=pagetext, bot=True, summary=pagesummary)</code>.
+</p>
+<h4 data-mw-thread-id="h-Monitoring_the_bot_status-Common_bot_features_you_should_consider_implementing"><span class="mw-headline" id="Monitoring_the_bot_status"><span data-mw-comment-start="" id="h-Monitoring_the_bot_status-Common_bot_features_you_should_consider_implementing"></span>Monitoring the bot status<span data-mw-comment-end="h-Monitoring_the_bot_status-Common_bot_features_you_should_consider_implementing"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=28" title="Edit section: Monitoring the bot status"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>If the bot is fully automated and performs regular edits, you should periodically check it runs as specified, and its behaviour has not been altered by software changes. Consider adding it to <a href="/wiki/Wikipedia:Bot_activity_monitor" title="Wikipedia:Bot activity monitor">Wikipedia:Bot activity monitor</a> to be notified if the bot stops working.
+</p>
+<div class="mw-heading mw-heading2 ext-discussiontools-init-section"><h2 data-mw-thread-id="h-Open-source_bots"><span class="mw-headline" id="Open-source_bots"><span data-mw-comment-start="" id="h-Open-source_bots"></span>Open-source bots<span data-mw-comment-end="h-Open-source_bots"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=29" title="Edit section: Open-source bots"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2><!--__DTELLIPSISBUTTON__{"threadItem":{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Open-source_bots","replies":[]}}--></div>
+<p>Many bot operators choose to make their code open source, and occasionally it may be required before approval for particularly complex bots. Making your code open source has several advantages:
+</p>
+<ul><li>It allows others to review your code for potential bugs. As with prose, it is often difficult for the author of code to adequately review it.</li>
+<li>Others can use your code to build their own bots. A user new to bot writing may be able to use your code as an example or a template for their own bots.</li>
+<li>It encourages <a href="/wiki/Secure_by_design" title="Secure by design">good security practices</a>, rather than <a href="/wiki/Security_through_obscurity" title="Security through obscurity">security through obscurity</a>.</li>
+<li>If you abandon the project, it allows other users to run your bot tasks without having to write new code.</li></ul>
+<p>Open-source code, while rarely required, is typically encouraged in keeping with the open and transparent nature of Wikipedia.
+</p><p>Before sharing code, make sure that sensitive information such as passwords is separated into a file that isn't made public.
+</p><p>There are many options available for users wishing to make their code open. Hosting the code in a subpage of the bot's userspace can be a hassle to maintain if not automated and results in the code being multi-licensed under Wikipedia's licensing terms in addition to any other terms you may specify. A better solution is to use a <a href="/wiki/Revision_control_system" class="mw-redirect" title="Revision control system">revision control system</a> such as <a href="/wiki/Apache_Subversion" title="Apache Subversion">SVN</a>, <a href="/wiki/Git_(software)" class="mw-redirect" title="Git (software)">Git</a>, or <a href="/wiki/Mercurial" title="Mercurial">Mercurial</a>. Wikipedia has articles comparing the different <a href="/wiki/Comparison_of_revision_control_software" class="mw-redirect" title="Comparison of revision control software">software options</a> and <a href="/wiki/Comparison_of_open_source_software_hosting_facilities" class="mw-redirect" title="Comparison of open source software hosting facilities">websites for code hosting</a>, many of which have no cost.
+</p>
+<div class="mw-heading mw-heading2 ext-discussiontools-init-section"><h2 data-mw-thread-id="h-Programming_languages_and_libraries"><span class="mw-headline" id="Programming_languages_and_libraries"><span data-mw-comment-start="" id="h-Programming_languages_and_libraries"></span>Programming languages and libraries<span data-mw-comment-end="h-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=30" title="Edit section: Programming languages and libraries"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h2><!--__DTELLIPSISBUTTON__{"threadItem":{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Programming_languages_and_libraries","replies":["h-Awk-Programming_languages_and_libraries","h-Perl-Programming_languages_and_libraries","h-PHP-Programming_languages_and_libraries","h-Python-Programming_languages_and_libraries","h-MATLAB-Programming_languages_and_libraries","h-Microsoft_.NET-Programming_languages_and_libraries","h-Java-Programming_languages_and_libraries","h-Node.js-Programming_languages_and_libraries","h-Ruby-Programming_languages_and_libraries","h-Common_Lisp-Programming_languages_and_libraries","h-Haskell-Programming_languages_and_libraries","h-VBScript-Programming_languages_and_libraries","h-Lua-Programming_languages_and_libraries"]}}--></div>
+<style data-mw-deduplicate="TemplateStyles:r1033289096">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}</style><div role="note" class="hatnote navigation-not-searchable">See also: <a href="https://www.mediawiki.org/wiki/API:Client_code" class="extiw" title="mw:API:Client code">mw:API:Client code</a> and <a href="https://www.mediawiki.org/wiki/Alternative_parsers" class="extiw" title="mw:Alternative parsers">mw:Alternative parsers</a></div>
+<p>Bots can be written in almost any programming language. The choice of a language depends on the experience and preferences of the bot writer, and on the availability of libraries relevant to bot development. The following list includes some languages commonly used for bots:
+</p>
+<h4 data-mw-thread-id="h-Awk-Programming_languages_and_libraries"><span class="mw-headline" id="Awk"><span data-mw-comment-start="" id="h-Awk-Programming_languages_and_libraries"></span>Awk<span data-mw-comment-end="h-Awk-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=31" title="Edit section: Awk"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/GNU_Awk" class="mw-redirect" title="GNU Awk">GNU Awk</a> is an easy language for bots small and large, including OAuth.
+</p>
+<ul><li>Framework and libraries: <a href="/wiki/Wikipedia:BOTWIKIAWK" class="mw-redirect" title="Wikipedia:BOTWIKIAWK">BotWikiAwk</a></li>
+<li>Example bots in the GitHub account of <a href="/wiki/User:GreenC" title="User:GreenC">User:GreenC</a> at <a rel="nofollow" class="external text" href="https://github.com/greencardamom?tab=repositories">GitHub</a></li></ul>
+<h4 data-mw-thread-id="h-Perl-Programming_languages_and_libraries"><span class="mw-headline" id="Perl"><span data-mw-comment-start="" id="h-Perl-Programming_languages_and_libraries"></span>Perl<span data-mw-comment-end="h-Perl-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=32" title="Edit section: Perl"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>If located on a webserver, you can start your program running and interface with your program while it is running via the <a href="/wiki/Common_Gateway_Interface" title="Common Gateway Interface">Common Gateway Interface</a> from your browser. If your internet service provider provides you with webspace, the chances are good that you have access to a Perl build on the webserver from which you can run your Perl programs.
+</p><p>Libraries:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://search.cpan.org/perldoc?MediaWiki::API">MediaWiki::API</a> – Basic interface to the API, allowing scripts to automate editing and extraction of data from MediaWiki driven sites.</li>
+<li><a rel="nofollow" class="external text" href="https://search.cpan.org/perldoc?MediaWiki::Bot">MediaWiki::Bot</a> – A fairly complete MediaWiki bot framework written in Perl. Provides a higher level of abstraction than MediaWiki::API. Plugins provide administrator and steward functionality. Currently unsupported.</li></ul>
+<h4 data-mw-thread-id="h-PHP-Programming_languages_and_libraries"><span class="mw-headline" id="PHP"><span data-mw-comment-start="" id="h-PHP-Programming_languages_and_libraries"></span>PHP<span data-mw-comment-end="h-PHP-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=33" title="Edit section: PHP"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/PHP" title="PHP">PHP</a> can also be used for programming bots. MediaWiki developers are already familiar with PHP, since that is the language MediaWiki and its extensions are written in. PHP is an especially good choice if you wish to provide a webform-based interface to your bot. For example, suppose you wanted to create a bot for renaming categories. You could create an HTML form into which you will type the current and desired names of a category. When the form is submitted, your bot could read these inputs, then edit all the articles in the current category and move them to the desired category. (Obviously, any bot with a form interface would need to be secured somehow from random web surfers.)
+</p><p>The <a href="/wiki/Wikipedia:PHP_bot_functions" title="Wikipedia:PHP bot functions">PHP bot functions</a> table may provide some insight into the capabilities of the major bot frameworks.
+</p>
+<table class="wikitable sortable" border="1">
+<caption>Current <a href="https://www.mediawiki.org/wiki/Manual:Creating_a_bot#PHP" class="extiw" title="mw:Manual:Creating a bot">PHP bot</a> frameworks
+</caption>
+<tbody><tr>
+<th>Key people<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[php 1]</a></sup></th>
+<th>Name</th>
+<th>PHP versions confirmed working
+</th>
+<th>Last release</th>
+<th>Last master branch update</th>
+<th>Uses API<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[php 2]</a></sup></th>
+<th><a href="/wiki/Template:Bots" title="Template:Bots">Exclusion compliant</a></th>
+<th>Admin functions</th>
+<th>Plugins</th>
+<th>Repository</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><a href="/wiki/User:Cyberpower678" title="User:Cyberpower678">Cyberpower678</a>, <a href="/wiki/User:Addshore" title="User:Addshore">Addshore</a>, <a href="/wiki/User:Jarry1250" title="User:Jarry1250">Jarry1250</a></td>
+<td><a href="/wiki/Wikipedia:Peachy" title="Wikipedia:Peachy">Peachy</a></td>
+<td style="background:#FFC7C7;vertical-align:middle;text-align:center;" class="table-no">5.2.1
+</td>
+<td>2013</td>
+<td>2022</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/MW-Peachy/Peachy">GitHub</a></td>
+<td>Large framework, currently undergoing rewrite. Documentation currently non-existent, so poke <a href="/wiki/User:Cyberpower678" title="User:Cyberpower678">User:Cyberpower678</a> for help.
+</td></tr>
+<tr>
+<td><a href="/wiki/User:Addshore" title="User:Addshore">Addshore</a></td>
+<td><a rel="nofollow" class="external text" href="https://github.com/addwiki/mediawiki-api-base">mediawiki-api-base</a></td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">7.4
+</td>
+<td>2021</td>
+<td>2022</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;" class="table-na">N/A</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;" class="table-na">N/A</td>
+<td style="background:#FFB;vertical-align:middle;text-align:center;" class="table-partial">extra libs</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/addwiki/mediawiki-api-base">GitHub</a></td>
+<td>Base library for interaction with the MediaWiki API, provides you with ways to handle logging in, out and handling tokens as well as easily getting and posting requests.
+</td></tr>
+<tr>
+<td><a href="/wiki/User:Addshore" title="User:Addshore">Addshore</a></td>
+<td><a rel="nofollow" class="external text" href="https://github.com/addwiki/mediawiki-api">mediawiki-api</a></td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">7.4
+</td>
+<td>2021</td>
+<td>2022</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#FFC7C7;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#FFB;vertical-align:middle;text-align:center;" class="table-partial">some</td>
+<td style="background:#FFB;vertical-align:middle;text-align:center;" class="table-partial">extra libs</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/addwiki/mediawiki-api">GitHub</a></td>
+<td>Built on top of <code>mediawiki-api-base</code> mentioned above, this adds more advanced services for the API such as <code>RevisionGetter</code>, <code>UserGetter</code>, <code>PageDeleter</code>, <code>RevisionPatroller</code>, <code>RevisionSaver</code>, etc. Supports <a href="https://www.mediawiki.org/wiki/API:Upload#Chunked_uploading" class="extiw" title="mw:API:Upload">chunked uploading</a>.
+</td></tr>
+<tr>
+<td><a href="/wiki/User:Nzhamstar" title="User:Nzhamstar">Nzhamstar</a>, <a href="/wiki/User:Xymph" title="User:Xymph">Xymph</a>, <a href="/wiki/User:Waldyrious" title="User:Waldyrious">Waldyrious</a>
+</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/hamstar/Wikimate">Wikimate</a></td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">5.3-5.6,<br/>7.x, 8.x
+</td>
+<td>2023</td>
+<td>2023</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#FFC7C7;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#FFC7C7;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#FFC7C7;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/hamstar/Wikimate">GitHub</a></td>
+<td>Supports main article and file stuff.  Authentication, checking if pages exist, reading and editing pages/sections.  Getting file information, downloading and uploading files.  Aims to be easy to use.
+</td></tr>
+<tr>
+<td><a href="/wiki/User:Chris_G" title="User:Chris G">Chris G</a>,<br/><a href="/wiki/User:Wbm1058" title="User:Wbm1058">wbm1058</a>
+</td>
+<td><a href="/wiki/User:RMCD_bot/botclasses.php" title="User:RMCD bot/botclasses.php">botclasses.php</a></td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">8.2
+</td>
+<td>n/a</td>
+<td>2024</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9EFF9E;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#FFC7C7;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td><a href="/wiki/User:RMCD_bot/botclasses.php" title="User:RMCD bot/botclasses.php">on wiki</a></td>
+<td>Fork of older wikibot.classes (used by <a href="/wiki/User:ClueBot" title="User:ClueBot">ClueBot</a> and <a href="/wiki/User:SoxBot" class="mw-redirect" title="User:SoxBot">SoxBot</a>). Updated for 2010 and 2015 API changes. Supports file uploading.
+</td></tr></tbody></table>
+<style data-mw-deduplicate="TemplateStyles:r1217336898">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Does not include those who worked on frameworks forked to create listed framework.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Where possible. Excludes uploading images and other such tasks which are not currently supported by the API.</span>
+</li>
+</ol></div></div>
+<h4 data-mw-thread-id="h-Python-Programming_languages_and_libraries"><span class="mw-headline" id="Python"><span data-mw-comment-start="" id="h-Python-Programming_languages_and_libraries"></span><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a><span data-mw-comment-end="h-Python-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=34" title="Edit section: Python"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Libraries:
+</p>
+<ul><li><a href="https://www.mediawiki.org/wiki/Manual:Pywikibot" class="extiw" title="mw:Manual:Pywikibot">Pywikibot</a> – Probably the most used bot framework.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/Riamse/ceterach">ceterach</a> – An interface for interacting with MediaWiki</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/alexz-enwp/wikitools">wikitools</a> – A Python-2 only lightweight bot framework that uses the MediaWiki API exclusively for getting data and editing, used and maintained by <a href="/wiki/User:Mr.Z-man" title="User:Mr.Z-man">Mr.Z-man</a> (<a rel="nofollow" class="external text" href="https://pypi.python.org/pypi/wikitools">downloads</a>)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/mwclient/mwclient">mwclient</a> – An API-based framework maintained by <a href="/wiki/User:Bryan" title="User:Bryan">Bryan</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/earwig/mwparserfromhell">mwparserfromhell</a> – A wikitext parser, maintained by <a href="/wiki/User:The_Earwig" title="User:The Earwig">The Earwig</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/barrust/mediawiki">pymediawiki</a> – A read-only MediaWiki API wrapper in Python, which is simple to use.</li></ul>
+<h4 data-mw-thread-id="h-MATLAB-Programming_languages_and_libraries"><span class="mw-headline" id="MATLAB"><span data-mw-comment-start="" id="h-MATLAB-Programming_languages_and_libraries"></span>MATLAB<span data-mw-comment-end="h-MATLAB-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=35" title="Edit section: MATLAB"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/JRCSTU/MatWiki">MatWiki</a> – a preliminary (as of Feb 2019) MATLAB R2016b(9.1.x) client supporting just bot-logins and semantic #ask queries.</li></ul>
+<h4 data-mw-thread-id="h-Microsoft_.NET-Programming_languages_and_libraries"><span class="mw-headline" id="Microsoft_.NET"><span data-mw-comment-start="" id="h-Microsoft_.NET-Programming_languages_and_libraries"></span>Microsoft .NET<span data-mw-comment-end="h-Microsoft_.NET-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=36" title="Edit section: Microsoft .NET"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Microsoft_.NET" class="mw-redirect" title="Microsoft .NET">Microsoft .NET</a> is a set of languages including <a href="/wiki/Microsoft_Visual_C_Sharp" class="mw-redirect" title="Microsoft Visual C Sharp">C#</a>, <a href="/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a>, <a href="/wiki/Visual_Basic_.NET" class="mw-redirect" title="Visual Basic .NET">Visual Basic .NET</a>, <a href="/wiki/J_Sharp" class="mw-redirect" title="J Sharp">J#</a>, <a href="/wiki/JScript_.NET" title="JScript .NET">JScript .NET</a>, <a href="/wiki/IronPython" title="IronPython">IronPython</a>, and <a href="/wiki/Windows_PowerShell" class="mw-redirect" title="Windows PowerShell">Windows PowerShell</a>. Using <a href="/wiki/Mono_(software)" title="Mono (software)">Mono Project</a>, .NET programs can also run on <a href="/wiki/Linux" title="Linux">Linux</a>, <a href="/wiki/Unix" title="Unix">Unix</a>, <a href="/wiki/BSD" class="mw-redirect" title="BSD">BSD</a>, <a href="/wiki/Solaris_(operating_system)" class="mw-redirect" title="Solaris (operating system)">Solaris</a> and <a href="/wiki/MacOS" title="MacOS">macOS</a> as well as under <a href="/wiki/Windows" class="mw-redirect" title="Windows">Windows</a>.
+</p><p>Libraries:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://dotnetwikibot.sourceforge.net/">DotNetWikiBot Framework</a> – a full-featured client <a href="/wiki/API" title="API">API</a> on .NET, that allows to build programs and web robots easily to manage information on MediaWiki-powered sites. Now translated to several languages. Detailed compiled documentation is available in English.</li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/project/showfiles.php?group_id=158332">WikiFunctions .NET library</a> – Bundled with <a href="/wiki/Wikipedia:AWB" class="mw-redirect" title="Wikipedia:AWB">AWB</a>, is a library of stuff useful for bots, such as generating lists, loading/editing articles, connecting to the recent changes IRC channel and more.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/CXuesong/WikiClientLibrary">WikiClientLibrary</a> — is a portable &amp; asynchronous MediaWiki API client library on .NET Standard. (<a rel="nofollow" class="external text" href="https://www.nuget.org/packages/CXuesong.MW.WikiClientLibrary/">see on nuget</a>, <a rel="nofollow" class="external text" href="https://github.com/CXuesong/WikiClientLibrary/wiki/%5BMediaWiki%5D-Getting-started">docs</a>).</li></ul>
+<h4 data-mw-thread-id="h-Java-Programming_languages_and_libraries"><span class="mw-headline" id="Java"><span data-mw-comment-start="" id="h-Java-Programming_languages_and_libraries"></span><a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a><span data-mw-comment-end="h-Java-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=37" title="Edit section: Java"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Libraries:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/eldur/jwbf">Java Wiki Bot Framework</a> – A Java wiki bot framework</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/mer-c/wiki-java">wiki-java</a> – A Java wiki bot framework that is only one file</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/WPCleaner/wpcleaner">WPCleaner</a> – The library used by the WPCleaner tool</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/fastily/jwiki">jwiki</a> – A simple and easy-to-use Java wiki bot framework</li></ul>
+<h4 data-mw-thread-id="h-Node.js-Programming_languages_and_libraries"><span class="mw-headline" id="Node.js"><span data-mw-comment-start="" id="h-Node.js-Programming_languages_and_libraries"></span>Node.js<span data-mw-comment-end="h-Node.js-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=38" title="Edit section: Node.js"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Libraries:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://www.npmjs.com/package/mwn">mwn</a> – A library actively maintained and written in modern ES6 using promises (supporting async–await). This is a large library, and has classes for conveniently working with page titles and wikitext (including limited wikitext parsing capabilities). Also supports <a href="/wiki/TypeScript" title="TypeScript">TypeScript</a>. See <a rel="nofollow" class="external text" href="https://github.com/siddharthvp/mwn">mwn</a> on <a href="/wiki/GitHub" title="GitHub">GitHub</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://www.npmjs.com/package/mock-mediawiki">mock-mediawiki</a> – An implementation of the MediaWiki JS interface in Node.js. See <a rel="nofollow" class="external text" href="https://github.com/wikimedia-gadgets/mock-mediawiki">mock-mediawiki</a> on <a href="/wiki/GitHub" title="GitHub">GitHub</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://www.npmjs.com/package/wikiapi">wikiapi</a> – A simple way to access MediaWiki API via JavaScript with simple wikitext parser, using CeJS MediaWiki module. See <a rel="nofollow" class="external text" href="https://github.com/kanasimi/wikibot">Wikipedia bot examples</a> on <a href="/wiki/GitHub" title="GitHub">GitHub</a>.</li></ul>
+<h4 data-mw-thread-id="h-Ruby-Programming_languages_and_libraries"><span class="mw-headline" id="Ruby"><span data-mw-comment-start="" id="h-Ruby-Programming_languages_and_libraries"></span><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a><span data-mw-comment-end="h-Ruby-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=39" title="Edit section: Ruby"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Libraries:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/FTB-Gamepedia/MediaWiki-Butt-Ruby">MediaWiki::Butt</a> – API client. Actively maintained. See <a href="https://www.mediawiki.org/wiki/API:Client_code/Evaluations/MediaWiki-Butt" class="extiw" title="mw:API:Client code/Evaluations/MediaWiki-Butt">evaluation</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/wikimedia/mediawiki-ruby-api">mediawiki/ruby/api</a> –  API client by <a href="https://www.mediawiki.org/wiki/Wikimedia_Release_Engineering_Team" class="extiw" title="mw:Wikimedia Release Engineering Team">Wikimedia Release Engineering Team</a>. Last updated December 2017, no longer maintained, but still works.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/kenpratt/wikipedia-client">wikipedia-client</a> – API client. Last updated March 2018. Unknown if still works.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/jpatokal/mediawiki-gateway">MediaWiki::Gateway</a> – API client. Last updated January 2016. Tested up to MediaWiki 1.22, was then compatible with Wikimedia wikis. Unknown if still works.</li></ul>
+<h4 data-mw-thread-id="h-Common_Lisp-Programming_languages_and_libraries"><span class="mw-headline" id="Common_Lisp"><span data-mw-comment-start="" id="h-Common_Lisp-Programming_languages_and_libraries"></span>Common Lisp<span data-mw-comment-end="h-Common_Lisp-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=40" title="Edit section: Common Lisp"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><a rel="nofollow" class="external text" href="http://www.cliki.net/CL-MediaWiki">CL-MediaWiki</a> – implements MediaWiki API as a <a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> package. Is planned to use <a href="/wiki/JSON" title="JSON">JSON</a> as a query data format. Supports maxlag and assertion.</li></ul>
+<h4 data-mw-thread-id="h-Haskell-Programming_languages_and_libraries"><span class="mw-headline" id="Haskell"><span data-mw-comment-start="" id="h-Haskell-Programming_languages_and_libraries"></span>Haskell<span data-mw-comment-end="h-Haskell-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=41" title="Edit section: Haskell"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><a rel="nofollow" class="external free" href="http://hackage.haskell.org/package/mediawiki">http://hackage.haskell.org/package/mediawiki</a></li></ul>
+<h4 data-mw-thread-id="h-VBScript-Programming_languages_and_libraries"><span class="mw-headline" id="VBScript"><span data-mw-comment-start="" id="h-VBScript-Programming_languages_and_libraries"></span>VBScript<span data-mw-comment-end="h-VBScript-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=42" title="Edit section: VBScript"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/VBScript" title="VBScript">VBScript</a> is a <a href="/wiki/Scripting_language" title="Scripting language">scripting language</a> based on the <a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a> programming language. There are no published bot frameworks for VBScript, but some examples of bots that use it can be seen below:
+</p>
+<ul><li><a href="/wiki/User:Smallman12q/Scripts/cleanuplistingtowiki" title="User:Smallman12q/Scripts/cleanuplistingtowiki">User:Smallman12q/Scripts/cleanuplistingtowiki</a> – Login and give preview of edit</li>
+<li><a href="/wiki/User:Smallman12q/VBS/Savewatchlist" class="mw-redirect" title="User:Smallman12q/VBS/Savewatchlist">User:Smallman12q/VBS/Savewatchlist</a> – Login, get raw watchlist, save to file, logout, close IE</li>
+<li><a href="https://commons.wikimedia.org/wiki/User:Smallbot#Sources" class="extiw" title="commons:User:Smallbot">Commons:User:Smallbot#Sources</a> – Several scripts showing the usage of VBScript (Javascript, XMLHTTP, MSHTML, XMLDOM, COM) for batch uploads.</li></ul>
+<h4 data-mw-thread-id="h-Lua-Programming_languages_and_libraries"><span class="mw-headline" id="Lua"><span data-mw-comment-start="" id="h-Lua-Programming_languages_and_libraries"></span>Lua<span data-mw-comment-end="h-Lua-Programming_languages_and_libraries"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Help:Creating_a_bot&amp;action=edit&amp;section=43" title="Edit section: Lua"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li>During the Lua Annual Workshop 2016, <a href="/wiki/User:Jim_Carter" title="User:Jim Carter">Jim Carter</a> and <a href="/wiki/User:Dfavro" title="User:Dfavro">Dfavro</a> started developing Lua's bot framework for Wikimedia projects. Please contact Jim Carter on their talk page to discuss.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/AlexanderMisel/mwtest">mwtest</a> is an example using Lua to write a wikibot, created by <a href="/wiki/User:Alexander_Misel" title="User:Alexander Misel">User:Alexander Misel</a>, with simple API.</li></ul>
+<div class="navbox-styles"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-labelledby="Wikipedia_technical_help" style="padding:3px"><table class="nowraplinks hlist mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2" style="text-align: center;"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Wikipedia_technical_help" title="Template:Wikipedia technical help"><abbr title="View this template" style="text-align: center;;;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Wikipedia_technical_help" title="Template talk:Wikipedia technical help"><abbr title="Discuss this template" style="text-align: center;;;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a href="/wiki/Special:EditPage/Template:Wikipedia_technical_help" title="Special:EditPage/Template:Wikipedia technical help"><abbr title="Edit this template" style="text-align: center;;;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Wikipedia_technical_help" style="font-size:114%;margin:0 4em"><a href="/wiki/Help:Directory#Technical_help" title="Help:Directory">Wikipedia technical help</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2" style="text-align: center;"><div><b>Get personal technical help at <a href="/wiki/Wikipedia:Teahouse" title="Wikipedia:Teahouse">the Teahouse</a>, <a href="/wiki/Wikipedia:Help_desk" title="Wikipedia:Help desk">help desk</a>, <a href="/wiki/Wikipedia:Village_pump_(technical)" title="Wikipedia:Village pump (technical)">village pump (technical)</a>, <a href="/wiki/Help:Introduction_to_talk_pages/1" title="Help:Introduction to talk pages/1">talk pages</a> or <a href="/wiki/Wikipedia:IRC" title="Wikipedia:IRC">IRC</a>.</b></div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Wikipedia:FAQ/Technical" title="Wikipedia:FAQ/Technical">General<br/>technical help</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Wikipedia:Browser_notes" title="Wikipedia:Browser notes">Browser notes</a>
+<ul><li><a href="/wiki/Wikipedia:Bypass_your_cache" title="Wikipedia:Bypass your cache">Bypass cache</a></li>
+<li><a href="/wiki/Wikipedia:Keyboard_shortcuts" title="Wikipedia:Keyboard shortcuts">Keyboard shortcuts</a></li></ul></li>
+<li><a href="/wiki/Help:Editing" title="Help:Editing">Editing</a>
+<ul><li><a href="/wiki/Help:CharInsert" title="Help:CharInsert">CharInsert</a></li>
+<li><a href="/wiki/Help:Edit_conflict" title="Help:Edit conflict">Edit conflict</a></li>
+<li><a href="/wiki/Help:Edit_toolbar" title="Help:Edit toolbar">Edit toolbar</a></li>
+<li><a href="/wiki/Help:Reverting" title="Help:Reverting">Reverting</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:How_to_create_a_page" title="Wikipedia:How to create a page">How to create a page</a></li>
+<li><a href="/wiki/Wikipedia:IRC" title="Wikipedia:IRC">IRC</a>
+<ul><li><a href="/wiki/Wikipedia:IRC/Tutorial" title="Wikipedia:IRC/Tutorial">Tutorial</a></li></ul></li>
+<li><a href="/wiki/Help:Mobile_access" title="Help:Mobile access">Mobile access</a></li>
+<li><a href="/wiki/Help:Multilingual_support" title="Help:Multilingual support">Multilingual support</a></li>
+<li><a href="/wiki/Help:Page_history" title="Help:Page history">Page history</a></li>
+<li><a href="/wiki/Help:Page_information" title="Help:Page information">Page information</a></li>
+<li><a href="/wiki/Wikipedia:Page_name" title="Wikipedia:Page name">Page name</a>
+<ul><li><a href="/wiki/Help:Page_name" title="Help:Page name">Help</a></li></ul></li>
+<li><a href="/wiki/Help:Printing" title="Help:Printing">Printing</a></li>
+<li><a href="/wiki/Wikipedia:Software_notices" title="Wikipedia:Software notices">Software notices</a>
+<ul><li><a href="/wiki/Wikipedia:Editnotice" title="Wikipedia:Editnotice">Editnotice</a></li></ul></li>
+<li><a href="/wiki/Help:Special_characters" title="Help:Special characters">Special Characters</a>
+<ul><li><a href="/wiki/Help:Entering_special_characters" title="Help:Entering special characters">Entering</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:User_access_levels" title="Wikipedia:User access levels">User access levels</a></li>
+<li><a href="/wiki/Wikipedia:VisualEditor" title="Wikipedia:VisualEditor">VisualEditor</a>
+<ul><li><a href="/wiki/Help:VisualEditor" title="Help:VisualEditor">Help</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Special:SpecialPages" title="Special:SpecialPages">Special<br/>page</a>-related</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Special_page" title="Help:Special page">Special page help</a></li>
+<li><a href="/wiki/Help:AllPages" title="Help:AllPages">AllPages</a></li>
+<li><a href="/wiki/Wikipedia:Edit_filter" title="Wikipedia:Edit filter">Edit filter</a></li>
+<li><a href="/wiki/Wikipedia:Emailing_users" title="Wikipedia:Emailing users">Emailing users</a></li>
+<li><a href="/wiki/Help:Logging_in" title="Help:Logging in">Logging in</a>
+<ul><li><a href="/wiki/Help:Reset_password" title="Help:Reset password">Reset passwords</a></li></ul></li>
+<li><a href="/wiki/Help:Log" title="Help:Log">Logs</a></li>
+<li><a href="/wiki/Wikipedia:Moving_a_page" title="Wikipedia:Moving a page">Moving a page</a>
+<ul><li><a href="/wiki/Wikipedia:History_merging" title="Wikipedia:History merging">History merging</a></li>
+<li><a href="/wiki/Help:When_to_place_technical_requests_in_%22Administrator_needed%22" title="Help:When to place technical requests in &quot;Administrator needed&quot;">Non-admin and admin-only page moves</a></li></ul></li>
+<li><a href="/wiki/Help:Notifications" title="Help:Notifications">Notifications/Echo</a>
+<ul><li><a href="/wiki/Help:Notifications/FAQ" title="Help:Notifications/FAQ">FAQ</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Page_Curation/Help" title="Wikipedia:Page Curation/Help">Page Curation</a></li>
+<li><a href="/wiki/Help:Import" title="Help:Import">Page import</a></li>
+<li><a href="/wiki/Wikipedia:Pending_changes" title="Wikipedia:Pending changes">Pending changes</a></li>
+<li><a href="/wiki/Wikipedia:Random" title="Wikipedia:Random">Random pages</a></li>
+<li><a href="/wiki/Help:Recent_changes" title="Help:Recent changes">Recent changes</a></li>
+<li><a href="/wiki/Help:Related_changes" title="Help:Related changes">Related changes</a></li>
+<li><a href="/wiki/Help:Searching" title="Help:Searching">Searching</a>
+<ul><li><a href="/wiki/Help:Linksearch" title="Help:Linksearch">Linksearch</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Tags" title="Wikipedia:Tags">Tags</a></li>
+<li><a href="/wiki/Help:User_contributions" title="Help:User contributions">User contributions</a></li>
+<li><a href="/wiki/Help:Watchlist" title="Help:Watchlist">Watchlist</a></li>
+<li><a href="/wiki/Help:What_links_here" title="Help:What links here">What links here</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Help:Wikitext" title="Help:Wikitext">Wikitext</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Wikitext" title="Help:Wikitext">Wikitext</a>
+<ul><li><a href="/wiki/Help:Cheatsheet" title="Help:Cheatsheet">Cheatsheet</a></li></ul></li>
+<li><a href="/wiki/Help:Columns" title="Help:Columns">Columns</a></li>
+<li><a href="/wiki/Help:Line-break_handling" title="Help:Line-break handling">Line-break handling</a></li>
+<li><a href="/wiki/Help:List" title="Help:List">Lists</a></li>
+<li><a href="/wiki/Help:Magic_words" title="Help:Magic words">Magic words</a>
+<ul><li><a href="/wiki/Help:Magic_words_for_beginners" title="Help:Magic words for beginners">For beginners</a></li>
+<li><a href="/wiki/Help:Conditional_expressions" title="Help:Conditional expressions">Conditional expressions</a></li>
+<li><a href="/wiki/Help:Switch_parser_function" title="Help:Switch parser function">Switch parser function</a></li>
+<li><a href="/wiki/Help:Time_function" title="Help:Time function">Time function</a></li></ul></li>
+<li><a href="/wiki/Help:Redirect" title="Help:Redirect">Redirects</a></li>
+<li><a href="/wiki/Help:Section" title="Help:Section">Sections and TOCs</a></li>
+<li><a href="/wiki/Help:Table" title="Help:Table">Tables</a>
+<ul><li><a href="/wiki/Help:Introduction_to_tables_with_Wiki_Markup/1" title="Help:Introduction to tables with Wiki Markup/1">Introduction</a></li>
+<li><a href="/wiki/Help:Basic_table_markup" title="Help:Basic table markup">Basics</a></li>
+<li><a href="/wiki/Wikipedia:Advanced_table_formatting" title="Wikipedia:Advanced table formatting">Advanced table formatting</a></li>
+<li><a href="/wiki/Help:Collapsing" title="Help:Collapsing">Collapsing</a></li>
+<li><a href="/wiki/Help:Conditional_tables" title="Help:Conditional tables">Conditional tables</a></li>
+<li><a href="/wiki/Help:Sortable_tables" title="Help:Sortable tables">Sortable tables</a></li></ul></li>
+<li><a href="/wiki/Help:Using_colours" title="Help:Using colours">Using colours</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Help:Link" title="Help:Link">Links</a> and <a href="/wiki/Help:Diff" title="Help:Diff">diffs</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Link" title="Help:Link">Links</a>
+<ul><li><a href="/wiki/Help:Interlanguage_links" title="Help:Interlanguage links">Interlanguage</a></li>
+<li><a href="/wiki/Help:Interwiki_linking" title="Help:Interwiki linking">Interwiki</a></li>
+<li><a href="/wiki/Help:Permanent_link" title="Help:Permanent link">Permanent</a></li></ul></li>
+<li><a href="/wiki/Help:Diff" title="Help:Diff">Diffs</a>
+<ul><li><a href="/wiki/Wikipedia:Simplest_diff_guide" title="Wikipedia:Simplest diff guide">Simplest diff guide</a></li>
+<li><a href="/wiki/Wikipedia:Simple_diff_and_link_guide" title="Wikipedia:Simple diff and link guide">Simple diff and link guide</a></li>
+<li><a href="/wiki/Wikipedia:Complete_diff_and_link_guide" title="Wikipedia:Complete diff and link guide">Complete diff and link guide</a></li></ul></li>
+<li><a href="/wiki/Help:Colon_trick" title="Help:Colon trick">Colon trick</a></li>
+<li><a href="/wiki/Help:Link_color" title="Help:Link color">Link color</a></li>
+<li><a href="/wiki/Help:Pipe_trick" title="Help:Pipe trick">Pipe trick</a></li>
+<li><a href="/wiki/Help:URL" title="Help:URL">URLs</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Wikipedia:Media" class="mw-disambig" title="Wikipedia:Media">Media</a> files: images,<br/>videos and sounds</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Media" title="Help:Media">Media help</a></li>
+<li><a href="/wiki/Help:Files" title="Help:Files">Files</a>
+<ul><li><a href="/wiki/Help:Creation_and_usage_of_media_files" title="Help:Creation and usage of media files">Creation and usage</a></li>
+<li><a href="/wiki/Wikipedia:Moving_files_to_Commons" title="Wikipedia:Moving files to Commons">Moving files to Commons</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Images" title="Wikipedia:Images">Images</a>
+<ul><li><a href="/wiki/Help:Introduction_to_images_with_Wiki_Markup/1" title="Help:Introduction to images with Wiki Markup/1">Introduction to images</a></li>
+<li><a href="/wiki/Help:Pictures" title="Help:Pictures">Picture tutorial</a></li>
+<li><a href="/wiki/Wikipedia:Preparing_images_for_upload" title="Wikipedia:Preparing images for upload">Preparing images for upload</a></li>
+<li><a href="/wiki/Wikipedia:Uploading_images" title="Wikipedia:Uploading images">Uploading images</a></li>
+<li><a href="/wiki/Help:Options_to_hide_an_image" title="Help:Options to hide an image">Options to hide an image</a></li>
+<li><a href="/wiki/Wikipedia:Extended_image_syntax" title="Wikipedia:Extended image syntax">Extended image syntax</a></li>
+<li><a href="/wiki/Wikipedia:SVG_help" title="Wikipedia:SVG help">SVG help</a></li></ul></li>
+<li><a href="/wiki/Help:Gallery_tag" title="Help:Gallery tag">Gallery tag</a></li>
+<li><a href="/wiki/Wikipedia:Graphics_tutorials" title="Wikipedia:Graphics tutorials">Graphics tutorials</a>
+<ul><li><a href="/wiki/Wikipedia:Basic_bitmap_image_editing" title="Wikipedia:Basic bitmap image editing">Basic bitmap image editing</a></li>
+<li><a href="/wiki/Wikipedia:How_to_improve_image_quality" title="Wikipedia:How to improve image quality">How to improve image quality</a></li>
+<li><a href="/wiki/Wikipedia:Graphics_Lab/Resources" title="Wikipedia:Graphics Lab/Resources">Graphics Lab resources</a></li></ul></li>
+<li><a href="/wiki/Help:Sound_file_markup" title="Help:Sound file markup">Sound file markup</a></li>
+<li><a href="/wiki/Help:Visual_file_markup" title="Help:Visual file markup">Visual file markup</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%">Other graphics</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Family_trees" title="Help:Family trees">Family trees</a></li>
+<li><a href="/wiki/Wikipedia:Graphs_and_charts" title="Wikipedia:Graphs and charts">Graphs and charts</a>
+<ul><li><a href="/wiki/Wikipedia:How_to_create_charts_for_Wikipedia_articles" title="Wikipedia:How to create charts for Wikipedia articles">How to create</a></li>
+<li><a href="/wiki/Help:Barchart" title="Help:Barchart">Barcharts</a></li>
+<li><a href="/wiki/Wikipedia:To_scale_charts" title="Wikipedia:To scale charts">To scale charts</a></li></ul></li>
+<li><a href="/wiki/Help:Displaying_a_formula" title="Help:Displaying a formula">Math formulas</a>
+<ul><li><a href="/wiki/Help:Displaying_a_formula#Use_of_HTML_templates" title="Help:Displaying a formula">Math symbols</a></li></ul></li>
+<li><a href="/wiki/Help:Score" title="Help:Score">Musical scores</a>
+<ul><li><a href="/wiki/Help:Musical_symbols" title="Help:Musical symbols">Musical symbols</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Timeline" title="Wikipedia:Timeline">Timeline</a>
+<ul><li><a href="/wiki/Help:EasyTimeline_syntax" title="Help:EasyTimeline syntax">EasyTimeline syntax</a></li></ul></li>
+<li><a href="/wiki/Help:WikiHiero_syntax" title="Help:WikiHiero syntax">WikiHiero syntax</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Help:A_quick_guide_to_templates" title="Help:A quick guide to templates">Templates</a> and<br/><a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a> modules</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Template" title="Help:Template">Templates</a></li>
+<li><a href="/wiki/Wikipedia:Advanced_template_coding" title="Wikipedia:Advanced template coding">Advanced template coding</a></li>
+<li><a href="/wiki/Wikipedia:Template_documentation" title="Wikipedia:Template documentation">Template documentation</a></li>
+<li><a href="/wiki/Wikipedia:Template_index" title="Wikipedia:Template index">Template index</a></li>
+<li><a href="/wiki/Help:Template_limits" title="Help:Template limits">Template limits</a></li>
+<li><a href="/wiki/Wikipedia:Template_sandbox_and_test_cases" title="Wikipedia:Template sandbox and test cases">Template sandbox and test cases</a></li>
+<li><a href="/wiki/Wikipedia:Citation_templates" title="Wikipedia:Citation templates">Citation templates</a></li>
+<li><a href="/wiki/Help:Lua" title="Help:Lua">Lua help</a></li>
+<li><a href="/wiki/Wikipedia:Lua" title="Wikipedia:Lua">Lua project</a>
+<ul><li><a href="/wiki/Wikipedia:Lua/Resources" title="Wikipedia:Lua/Resources">Resources</a></li>
+<li><a href="/wiki/Wikipedia:Lua/To_do" title="Wikipedia:Lua/To do">To do</a></li></ul></li>
+<li><a href="/wiki/Help:Substitution" title="Help:Substitution">Substitution</a></li>
+<li><a href="/wiki/Help:Purge" title="Help:Purge">Purge</a>
+<ul><li><a href="/wiki/Help:Job_queue" title="Help:Job queue">Job queue</a></li></ul></li>
+<li><a href="/wiki/Help:Transclusion" title="Help:Transclusion">Transclusion</a>
+<ul><li><a href="/wiki/Help:Labeled_section_transclusion" title="Help:Labeled section transclusion">Labeled section</a></li>
+<li><a href="/wiki/Wikipedia:Transclusion_costs_and_benefits" title="Wikipedia:Transclusion costs and benefits">Costs and benefits</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Guide_to_Scribbling" title="Wikipedia:Guide to Scribbling">Guide to Scribbling</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Wikipedia:Administration#Data_structure_and_development" title="Wikipedia:Administration">Data structure</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Wikipedia:Namespace" title="Wikipedia:Namespace">Namespaces</a></li>
+<li><a href="/wiki/Wikipedia:What_is_an_article%3F" title="Wikipedia:What is an article?">Main/Article</a></li>
+<li><a href="/wiki/Help:Category" title="Help:Category">Category</a></li>
+<li><a href="/wiki/Wikipedia:Drafts" title="Wikipedia:Drafts">Draft</a></li>
+<li><a href="/wiki/Help:Files" title="Help:Files">File</a>
+<ul><li><a href="/wiki/Help:File_description_page" title="Help:File description page">File description page</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Help_namespace" title="Wikipedia:Help namespace">Help</a></li>
+<li><a href="/wiki/Wikipedia:Portal" title="Wikipedia:Portal">Portal</a></li>
+<li><a href="/wiki/Wikipedia:Project_namespace" title="Wikipedia:Project namespace">Project/Wikipedia</a></li>
+<li><a href="/wiki/Help:Talk_pages" title="Help:Talk pages">Talk</a>
+<ul><li><a href="/wiki/Help:Archiving_a_talk_page" title="Help:Archiving a talk page">Archiving</a>
+<ul><li><a href="/wiki/Help:Archiving_(plain_and_simple)" title="Help:Archiving (plain and simple)">Simple</a></li></ul></li></ul></li>
+<li><a href="/wiki/Wikipedia:Template_namespace" title="Wikipedia:Template namespace">Template</a></li>
+<li><a href="/wiki/Wikipedia:User_pages" title="Wikipedia:User pages">User</a>
+<ul><li><a href="/wiki/Wikipedia:User_page_design_guide" title="Wikipedia:User page design guide">User page design</a></li></ul></li>
+<li><a href="/wiki/Help:MediaWiki_namespace" title="Help:MediaWiki namespace">MediaWiki</a>
+<ul><li><a href="/wiki/Wikipedia:Bug_reports_and_feature_requests" title="Wikipedia:Bug reports and feature requests">Bug reports and feature requests</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Extension:TimedMediaHandler" class="extiw" title="mw:Extension:TimedMediaHandler">TimedMediaHandler extension</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Lua" title="Wikipedia:Lua">Module</a></li>
+<li><a href="/wiki/Help:Special_page" title="Help:Special page">Special</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/HTML" title="HTML">HTML</a> and <a href="/wiki/CSS" title="CSS">CSS</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Cascading_Style_Sheets" title="Help:Cascading Style Sheets">Cascading Style Sheets</a></li>
+<li><a href="/wiki/Help:HTML_in_wikitext" title="Help:HTML in wikitext">HTML in wikitext</a></li>
+<li><a href="/wiki/Wikipedia:Catalogue_of_CSS_classes" title="Wikipedia:Catalogue of CSS classes">Catalogue of CSS classes</a></li>
+<li><a href="/wiki/Wikipedia:Common.js_and_common.css" title="Wikipedia:Common.js and common.css">Common.js and common.css</a></li>
+<li><a href="/wiki/Template:Mxt/User_CSS_for_a_monospaced_coding_font" title="Template:Mxt/User CSS for a monospaced coding font">User CSS for monospaced coding font</a></li>
+<li><a href="/wiki/Wikipedia:WikiProject_Microformats/classes" title="Wikipedia:WikiProject Microformats/classes">Classes in microformats</a></li>
+<li><a href="/wiki/Help:Markup_validation" title="Help:Markup validation">Markup validation</a></li>
+<li><a href="/wiki/Wikipedia:Span_tags" title="Wikipedia:Span tags">Span tags</a></li>
+<li><a href="/wiki/Help:Useful_styles" title="Help:Useful styles">Useful styles</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%"><a href="/wiki/Wikipedia:Customisation" title="Wikipedia:Customisation">Customisation</a><br/>and tools</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Help:Preferences" title="Help:Preferences">Preferences</a></li>
+<li><a href="/wiki/Wikipedia:Gadget" title="Wikipedia:Gadget">Gadgets</a></li>
+<li><a href="/wiki/Wikipedia:Skin" title="Wikipedia:Skin">Skins</a></li>
+<li><a href="/wiki/Help:Citation_tools" title="Help:Citation tools">Citation tools</a></li>
+<li><a href="/wiki/Wikipedia:Cleaning_up_vandalism/Tools" title="Wikipedia:Cleaning up vandalism/Tools">Cleaning up vandalism tools</a></li>
+<li><a href="/wiki/Wikipedia:Customizing_watchlists" title="Wikipedia:Customizing watchlists">Customizing watchlists</a>
+<ul><li><a href="/wiki/Help:Hide_Pages_in_Watchlist" title="Help:Hide Pages in Watchlist">Hide pages</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Scripts" title="Wikipedia:Scripts">IRC Scripts</a></li>
+<li><a href="/wiki/Wikipedia:User_scripts" title="Wikipedia:User scripts">User scripts</a>
+<ul><li><a href="/wiki/Wikipedia:User_scripts/Guide" title="Wikipedia:User scripts/Guide">Guide</a></li>
+<li><a href="/wiki/Wikipedia:User_scripts/List" title="Wikipedia:User scripts/List">List</a></li>
+<li><a href="/wiki/Wikipedia:User_scripts/Techniques" title="Wikipedia:User scripts/Techniques">Techniques</a></li></ul></li>
+<li><a href="/wiki/Help:User_style" title="Help:User style">User style</a></li>
+<li><a href="/wiki/Wikipedia:Tools" title="Wikipedia:Tools">Tools</a>
+<ul><li><a href="/wiki/Wikipedia:Tools/Alternative_browsing" title="Wikipedia:Tools/Alternative browsing">Alternative browsing</a></li>
+<li><a href="/wiki/Wikipedia:Tools/Browser_tools" title="Wikipedia:Tools/Browser tools">Browser tools</a></li>
+<li><a href="/wiki/Wikipedia:Tools/Editing_tools" title="Wikipedia:Tools/Editing tools">Editing tools</a></li>
+<li><a href="/wiki/Wikipedia:Tools/Navigation_shortcuts" title="Wikipedia:Tools/Navigation shortcuts">Navigation shortcuts</a></li>
+<li><a href="/wiki/Wikipedia:Tools/Optimum_tool_set" title="Wikipedia:Tools/Optimum tool set">Optimum tool set</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:Wikimedia_Cloud_Services" title="Wikipedia:Wikimedia Cloud Services">Wikimedia Cloud Services</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Beta_Features" class="extiw" title="mw:Beta Features">Beta Features at MediaWiki</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="text-align: center;;width:1%">Automated editing</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Wikipedia:WikiProject_Articles_for_creation/Helper_script" title="Wikipedia:WikiProject Articles for creation/Helper script">AfC helper script</a></li>
+<li><a href="/wiki/Wikipedia:AntiVandal" title="Wikipedia:AntiVandal">AntiVandal</a></li>
+<li><a href="/wiki/Wikipedia:AutoWikiBrowser" title="Wikipedia:AutoWikiBrowser">AutoWikiBrowser</a></li>
+<li><a href="/wiki/Wikipedia:Bots" title="Wikipedia:Bots">Bots</a>
+<ul><li><a class="mw-selflink selflink">Creating</a></li>
+<li><a href="/wiki/Wikipedia:History_of_Wikipedia_bots" title="Wikipedia:History of Wikipedia bots">history</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:HotCat" title="Wikipedia:HotCat">HotCat</a></li>
+<li><a href="/wiki/Wikipedia:Huggle" title="Wikipedia:Huggle">Huggle</a></li>
+<li><a href="/wiki/Wikipedia:Tools/Navigation_popups" title="Wikipedia:Tools/Navigation popups">Navigation popups</a></li>
+<li><a href="/wiki/Wikipedia:RedWarn" title="Wikipedia:RedWarn">RedWarn</a></li>
+<li><a href="/wiki/Wikipedia:Twinkle" title="Wikipedia:Twinkle">Twinkle</a></li>
+<li><a href="/wiki/Wikipedia:Ultraviolet" title="Wikipedia:Ultraviolet">Ultraviolet</a></li>
+<li><a href="/wiki/Wikipedia:WPCleaner" title="Wikipedia:WPCleaner">WPCleaner</a></li>
+<li>Inactive
+<ul><li><a href="/wiki/Wikipedia:Igloo" title="Wikipedia:Igloo">igloo</a></li>
+<li><a href="/wiki/Wikipedia:STiki" title="Wikipedia:STiki">STiki</a></li></ul></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2" style="text-align: center;"><div>
+<ul><li>See also: <b><a href="/wiki/Category:Wikipedia_how-to" title="Category:Wikipedia how-to">Category:Wikipedia how-to</a></b></li>
+<li><b><a href="/wiki/Category:Wikipedia_information_pages" title="Category:Wikipedia information pages">Category:Wikipedia information pages</a></b><br/>Further navigation at: <a href="/wiki/Template:Wikipedia_help_pages" title="Template:Wikipedia help pages">Help pages</a>
+<ul><li><a href="/wiki/Template:Administrators%27_guide" title="Template:Administrators' guide">Administrators</a></li></ul></li>
+<li><a href="/wiki/Wikipedia:WikiProject_Accessibility/Navigation_menu" title="Wikipedia:WikiProject Accessibility/Navigation menu">Accessibility</a></li>
+<li><a href="/wiki/Template:Wikipedia_accounts" title="Template:Wikipedia accounts">Accounts</a></li>
+<li><a href="/wiki/Template:Botnav" title="Template:Botnav">Bots</a></li>
+<li><a href="/wiki/Template:Wikipedia_referencing" title="Template:Wikipedia referencing">Referencing</a>
+<ul><li><a href="/wiki/Template:Citation_metadata_navbox" title="Template:Citation metadata navbox">Citation metadata</a></li></ul></li>
+<li><a href="/wiki/Template:Wikipedia_templates" title="Template:Wikipedia templates">Templates</a></li>
+<li><a href="/wiki/Wikipedia:User_scripts/Navbox" title="Wikipedia:User scripts/Navbox">User scripts</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.codfw.main‐6b6f4c49c‐5nkw7
+Cached time: 20240405110100
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+DiscussionTools time usage: 0.042 seconds
+CPU time usage: 0.312 seconds
+Real time usage: 0.482 seconds
+Preprocessor visited node count: 1102/1000000
+Post‐expand include size: 52105/2097152 bytes
+Template argument size: 2484/2097152 bytes
+Highest expansion depth: 12/100
+Expensive parser function count: 4/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 19598/5000000 bytes
+Lua time usage: 0.089/10.000 seconds
+Lua memory usage: 2668241/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  255.140      1 -total
+ 26.11%   66.629      1 Template:Information_page
+ 20.54%   52.409      1 Template:Botnav
+ 19.89%   50.736      1 Template:Mbox
+ 17.23%   43.948      1 Template:Wikipedia_technical_help
+ 13.49%   34.418      2 Template:Ombox
+ 12.87%   32.825      2 Template:Flatlist
+ 12.86%   32.808      2 Template:Namespace_detect
+ 11.60%   29.605      1 Template:Pp-move-indef
+ 11.60%   29.603      1 Template:Shortcut
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:8354786-0!canonical and timestamp 20240405110100 and revision id 1187817225. Rendering was triggered because: page-view
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Help:Creating_a_bot&amp;oldid=1187817225">https://en.wikipedia.org/w/index.php?title=Help:Creating_a_bot&amp;oldid=1187817225</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Wikipedia_information_pages" title="Category:Wikipedia information pages">Wikipedia information pages</a></li><li><a href="/wiki/Category:Wikipedia_bots" title="Category:Wikipedia bots">Wikipedia bots</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="/wiki/Category:Wikipedia_move-protected_project_pages" title="Category:Wikipedia move-protected project pages">Wikipedia move-protected project pages</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 1 December 2023, at 16:23<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply. By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Help:Creating_a_bot&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul>
+		<li>
+		<button class="cdx-button cdx-button--icon-only vector-limited-width-toggle" id=""><span class="vector-icon mw-ui-icon-fullScreen mw-ui-icon-wikimedia-fullScreen"></span>
+
+<span>Toggle limited content width</span>
+</button>
+</li>
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-7f5bb5b669-v572l","wgBackendResponseTime":162,"wgDiscussionToolsPageThreads":[{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Why_would_I_need_to_create_a_bot?","replies":[]},{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Considerations_before_creating_a_bot","replies":[{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Reuse_existing_bots-Considerations_before_creating_a_bot","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Reuse_codebase-Considerations_before_creating_a_bot","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Important_questions-Considerations_before_creating_a_bot","replies":[]}]},{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-How_does_a_Wikipedia_bot_work?","replies":[{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Overview_of_operation-How_does_a_Wikipedia_bot_work?","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-APIs_for_bots-How_does_a_Wikipedia_bot_work?","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Logging_in-How_does_a_Wikipedia_bot_work?","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Editing;_edit_tokens-How_does_a_Wikipedia_bot_work?","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Edit_conflicts-How_does_a_Wikipedia_bot_work?","replies":[]}]},{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Overview_of_the_process_of_developing_a_bot","replies":[{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Idea-Overview_of_the_process_of_developing_a_bot","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Specification-Overview_of_the_process_of_developing_a_bot","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Software_architecture-Overview_of_the_process_of_developing_a_bot","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Implementation-Overview_of_the_process_of_developing_a_bot","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Testing-Overview_of_the_process_of_developing_a_bot","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Documentation-Overview_of_the_process_of_developing_a_bot","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Queries/Complaints-Overview_of_the_process_of_developing_a_bot","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Maintenance-Overview_of_the_process_of_developing_a_bot","replies":[]}]},{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-General_guidelines_for_running_a_bot","replies":[{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Bot_best_practices-General_guidelines_for_running_a_bot","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Common_bot_features_you_should_consider_implementing-General_guidelines_for_running_a_bot","replies":[{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Manual_assistance-Common_bot_features_you_should_consider_implementing","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Disabling_the_bot-Common_bot_features_you_should_consider_implementing","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Signature-Common_bot_features_you_should_consider_implementing","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Bot_Flag-Common_bot_features_you_should_consider_implementing","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Monitoring_the_bot_status-Common_bot_features_you_should_consider_implementing","replies":[]}]}]},{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Open-source_bots","replies":[]},{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-Programming_languages_and_libraries","replies":[{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Awk-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Perl-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-PHP-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Python-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-MATLAB-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Microsoft_.NET-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Java-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Node.js-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Ruby-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Common_Lisp-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Haskell-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-VBScript-Programming_languages_and_libraries","replies":[]},{"headingLevel":4,"name":"h-","type":"heading","level":0,"id":"h-Lua-Programming_languages_and_libraries","replies":[]}]}],"wgPageParseReport":{"discussiontools":{"limitreport-timeusage":"0.042"},"limitreport":{"cputime":"0.312","walltime":"0.482","ppvisitednodes":{"value":1102,"limit":1000000},"postexpandincludesize":{"value":52105,"limit":2097152},"templateargumentsize":{"value":2484,"limit":2097152},"expansiondepth":{"value":12,"limit":100},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":19598,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  255.140      1 -total"," 26.11%   66.629      1 Template:Information_page"," 20.54%   52.409      1 Template:Botnav"," 19.89%   50.736      1 Template:Mbox"," 17.23%   43.948      1 Template:Wikipedia_technical_help"," 13.49%   34.418      2 Template:Ombox"," 12.87%   32.825      2 Template:Flatlist"," 12.86%   32.808      2 Template:Namespace_detect"," 11.60%   29.605      1 Template:Pp-move-indef"," 11.60%   29.603      1 Template:Shortcut"]},"scribunto":{"limitreport-timeusage":{"value":"0.089","limit":"10.000"},"limitreport-memusage":{"value":2668241,"limit":52428800}},"cachereport":{"origin":"mw-web.codfw.main-6b6f4c49c-5nkw7","timestamp":"20240405110100","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+</html>

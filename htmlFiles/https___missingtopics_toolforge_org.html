@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html><head>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<link rel="stylesheet" href="//tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//tools-static.wmflabs.org/cdnjs/ajax/libs/tether/1.3.3/css/tether.min.css">
+<link rel="stylesheet" type="text/css" href="//tools-static.wmflabs.org/magnustools/resources/css/common.css">
+<link rel="stylesheet" href="//tools-static.wmflabs.org/magnustools/resources/html/wikimedia.css">
+<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
+<script src="//tools-static.wmflabs.org/magnustools/resources/js/common.js"></script>
+<script src="//tools-static.wmflabs.org/tooltranslate/tt.js"></script>
+<style type="text/css"></style>
+<script type='text/javascript'></script>
+
+
+
+<script type='text/javascript'>
+function bootstrap4_compatability () {
+	$('input[type=text]').addClass('form-control') ;
+	$('input[type=number]').addClass('form-control') ;
+//	$('input[type=select]').addClass('form-control') ;
+//	$('input[type=radio]').css({'padding-left':'20px'}) ;
+//	$('input[type=checkbox]').css({'padding-left':'20px'}) ;
+	$('textarea').addClass('form-control') ;
+}
+
+$(document).ready ( function () {
+	bootstrap4_compatability() ;
+} ) ;
+</script>
+
+</head>
+
+<body>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a id='toolname' class="navbar-brand" href="?">Missing topics</a>
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="bd-main-nav">
+	<ul class="navbar-nav mr-auto">
+	</ul>
+	<ul class="navbar-nav">
+		<li class="nav-item" id='tooltranslate_wrapper'></li>
+		<li class="nav-item active"><a target='_blank' class="nav-link l_manual" href="//magnustools.toolforge.org">Tools</a></li>
+		<li id='git' class="nav-item active"><a target='_blank' class="nav-link l_manual" href="//bitbucket.org/magnusmanske">Git</a></li>
+		<li class="nav-item active"><a id="discuss_link" target='_blank' class="nav-link l_manual" href="//en.wikipedia.org/wiki/User_talk:Magnus_Manske">Talk</a></li>
+		<li class="nav-item"><a style="margin:0px;padding:0px;margin-top:4px;margin-left:10px;" href="/" target='_blank'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Toolforge_logo.svg/32px-Toolforge_logo.svg.png" title="Powered by Wikimedia Toolforge" border="0" width="32px"></a></li>
+	</ul>
+
+	</div>
+</nav>
+</div>
+
+
+<!--
+<div class="container">
+<header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+  <div class="clearfix"><button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">☰</button></div>
+  <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <nav class="nav navbar-nav">
+		<a id='toolname' class="navbar-brand nav-item nav-link active" href="?">Missing topics</a>
+		<div class='pull-sm-right'>
+		<ul class="nav navbar-nav">
+		  <li class="nav-item" id='tooltranslate_wrapper'></li>
+		  <li class="nav-item active"><a target='_blank' class="nav-link l_manual" href="/magnustools">Tools</a></li>
+		  <li id='git' class="nav-item active"><a target='_blank' class="nav-link l_manual" href="//bitbucket.org/magnusmanske">Git</a></li>
+		  <li class="nav-item active"><a id="discuss_link" target='_blank' class="nav-link l_manual" href="//en.wikipedia.org/wiki/User_talk:Magnus_Manske">Talk</a></li>
+		  <li class="nav-item"><a style="margin:0px;padding:0px;margin-top:4px;margin-left:10px;" href="/" target='_blank'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Toolforge_logo.svg/32px-Toolforge_logo.svg.png" title="Powered by Wikimedia Toolforge" border="0" width="32px"></a></li>
+		</ul>
+		</div>
+    </nav>
+</header>
+</div>
+--><div id="main_content" class="container"><div class="row"><div class="col-sm-12" style="margin-bottom:20px;margin-top:10px;">
+<div style='margin:3px;padding:3px;text-align:center;background-color:#d9edf7;'>Please try <a href='https://petscan.wmflabs.org/'>PetScan</a>, the designated successor to this tool!</div>Finds redlinks in the pages of a category, or of a single page, and sorts them according to number of occurrences.<br/><form method='get' class='form-inline'>
+	<table class='table table-condensed'>
+	<tr><th>Project</th><td>
+	<input type='text' name='language' class='span2' value='de'/> . 
+	<input type='text' name='project' class='span3' value='wikipedia'/>
+	</td></tr>
+	<tr><th>Links in article</th><td><input type='text' name='article' value=''/>, <i>or</i></td></tr>
+	<tr><th>Category</th><td>
+	<input type='text' name='category' value=''/>
+	depth
+	<input type='text' class='span1' name='depth' value='1'/> (0=just that category)
+	</td></tr>
+	<tr><th valign='top'>Output</th><td>
+	<label><input type='radio' name='wikimode' value='0' checked/> Generate linked HTML output</label><br/>
+	<label><input type='radio' name='wikimode' value='1' /> Generate wiki text output</label><br/>
+	<label><input type='radio' name='wikimode' value='2' /> Generate brief wiki text output</label>
+	</td></tr>
+	<tr><th>Options</th><td>
+	<label><input type='checkbox' name='notemplatelinks' value='1' /> Filter out links from templates used in category pages</label><br/>
+	<label><input type='checkbox' name='nosingles' value='1' checked/> Do not list links that are wanted only</label>
+	<input type='text' style='width:50px' name='limitnum' value='1' />
+	time(s)</td></tr>
+<!--	<tr><th></th><td><input type='checkbox' name='botmode' value='1'/>Bot-mode</td></tr>-->
+	<tr><th></th><td><input type='submit' name='doit' class='btn btn-primary' value='Run'/></td></tr>
+	</table>
+	</form>
