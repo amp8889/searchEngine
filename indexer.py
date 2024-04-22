@@ -56,6 +56,16 @@ def preprocess_and_save_documents(directory, output_filename):
     indexer = Indexer(documents)
     indexer.save_index(output_filename)
 
+
+
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     documents_directory = 'htmlFiles'
     output_filename = 'documents.pickle'
