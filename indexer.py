@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 class Indexer:
     def __init__(self, documents):
-        self.vectorizer = TfidfVectorizer(stop_words='english')  # Using English stop words
+        self.vectorizer = TfidfVectorizer(stop_words='english')  
         self.documents = documents
         self.tfidf_matrix = self._build_index()
 
@@ -22,18 +22,18 @@ def load_documents_from_directory(directory):
         if filename.endswith('.html'):
             filepath = os.path.join(directory, filename)
             html_content = None
-            # Try reading with UTF-8 first
+            
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     html_content = f.read()
             except UnicodeDecodeError:
-                # If UTF-8 fails, try reading with Latin-1
+                
                 try:
                     with open(filepath, 'r', encoding='iso-8859-1') as f:
                         html_content = f.read()
                 except UnicodeDecodeError as e:
                     print(f"Failed to read {filename} with UTF-8 and Latin-1 encodings: {e}")
-                    continue  # Skip to the next file
+                    continue  
 
             if html_content:
                 text_content = extract_text_from_html(html_content)
@@ -43,7 +43,7 @@ def load_documents_from_directory(directory):
 
 def extract_text_from_html(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
-    for script in soup(["script", "style"]):  # remove all script and style elements
+    for script in soup(["script", "style"]):  
         script.extract()
     text = soup.get_text()
     lines = (line.strip() for line in text.splitlines())
@@ -70,5 +70,5 @@ if __name__ == "__main__":
     documents_directory = 'htmlFiles'
     output_filename = 'documents.pickle'
 
-    # Preprocess and save documents
+    
     preprocess_and_save_documents(documents_directory, output_filename)

@@ -19,7 +19,7 @@ class MySpider(scrapy.Spider):
             return
 
         self.visited_urls.add(response.url)
-        # Save HTML content or process as needed
+        
         self.save_html(response)
 
         if self.max_pages is not None and len(self.visited_urls) >= self.max_pages:
